@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+@import url("https://use.typekit.net/nnh8xid.css");                                 /* Adobe fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');   /* Google fonts */
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
