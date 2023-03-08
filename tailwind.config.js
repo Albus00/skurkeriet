@@ -17,9 +17,12 @@ module.exports = {
       },
       colors: {
         black: '#030302',
-        yellow: '#FFEC0A',
+        yellow: '#F9EA38',
         grey: '#2F2F2F',
         blackText: '#030302'
+      },
+      backgroundImage: {
+        'group': "url('/images/group.jpg')"
       }
     },
     screens: {
