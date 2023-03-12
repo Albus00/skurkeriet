@@ -19,7 +19,7 @@ module.exports = {
         black: '#030302',
         yellow: '#F9EA38',
         grey: '#2F2F2F',
-        blackText: '#030302'
+        whiteText: '#E3E3E3'
       },
       backgroundImage: {
         'group': "url('/images/group.jpg')"

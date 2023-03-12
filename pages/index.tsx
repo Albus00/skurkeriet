@@ -11,9 +11,9 @@ export default function Home() {
       </Head>
       <main>
         {/* Group image */}
-        <div className='h-screen w-screen bg-group bg-cover bg-center'>
-          <div className=''>
-            <p>SKURKERIET</p>
+        <div className='flex flex-col-reverse items-center h-screen w-screen bg-group bg-cover bg-center'>
+          <div className='text-whiteText'>
+            <p className='text-8xl tracking-widest'>SKURKERIET</p>
             <p>NOLLEP SKA BLI VÅRT</p>
           </div>
         </div>
