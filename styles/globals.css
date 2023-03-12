@@ -104,12 +104,28 @@ body {
 }
 
 h1 {
-  
+  font-family: Industry Inc Base;
+  font-size: 6rem;
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+
+h3 {
+  font-family: Industry Inc Base;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 0.2em;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.bottom-shadow {
+  -moz-box-shadow: inset 0 -10px 10px -10px #000000;
+  -webkit-box-shadow: inset 0 -10px 10px -10px #000000;
+  box-shadow: inset 0 -10px 10px -10px #000000;
 }
 
 @media (prefers-color-scheme: dark) {

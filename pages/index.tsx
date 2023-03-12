@@ -11,10 +11,10 @@ export default function Home() {
       </Head>
       <main>
         {/* Group image */}
-        <div className='flex flex-col-reverse items-center h-screen w-screen bg-group bg-cover bg-center'>
-          <div className='text-whiteText'>
-            <p className='text-8xl tracking-widest'>SKURKERIET</p>
-            <p>NOLLEP SKA BLI VÅRT</p>
+        <div className='flex flex-col-reverse items-center h-screen w-screen bg-group bg-cover bg-center bottom-shadow'>
+          <div className='text-whiteText text-center h-2/5'>
+            <h1 className='mb-5'>SKURKERIET</h1>
+            <h3>NOLLEP SKA BLI VÅRT</h3>
           </div>
         </div>
       </main>
