@@ -104,15 +104,16 @@ h1 {
 h2 {
   @apply text-whiteText;
   font-family: Industry Inc Base;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
 }
 
 h3 {
   @apply text-whiteText;
   font-family: Industry Inc Base;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1;
   letter-spacing: 0.2em;
 }

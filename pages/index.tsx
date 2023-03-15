@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         {/* History */}
-        <div>
+        <div className='text-center pt-8 px-52'>
           <h2>HISTORIEN OM SKURKERIET</h2>
           <p>
             Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
