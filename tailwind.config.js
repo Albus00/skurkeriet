@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'industry': 'Industry Inc Base',
-        'roboto': 'Roboto',
+        'roboto': "'Roboto', sans-serif",
         'vinyl': 'Rubik Vinyl'
       },
       colors: {

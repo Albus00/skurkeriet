@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         {/* History */}
-        <div className='text-center pt-8 px-52'>
+        <div className='text-center px-72 pt-4 pb-36'>
           <h2>HISTORIEN OM SKURKERIET</h2>
           <p>
             Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
@@ -29,6 +29,12 @@ export default function Home() {
             gått från stad till stad genom århundra derna och skapat kaos. De åldras inte, de pratar inte, de fruktas vart
             de än går. Nu har de ett nytt mål. Nolle-p.
           </p>
+        </div>
+
+        {/* Characters */}
+        <div className='text-center px-10 pb-32'>
+          <h4>KLICKA PÅ EN SKURK</h4>
+
         </div>
       </main>
     </>
