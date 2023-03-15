@@ -17,6 +17,19 @@ export default function Home() {
             <h3>NOLLEP SKA BLI VÅRT</h3>
           </div>
         </div>
+
+        {/* History */}
+        <div>
+          <h2>HISTORIEN OM SKURKERIET</h2>
+          <p>
+            Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
+            nå gonsin skådat. Blixten träffade fängelset som skUrkarna satt i och det brann ned. Ryktet säger att det var
+            skurkarna själva som anlade bran den. Sägen säger att en förbannelse lades över skurkar na den natten. Ingen
+            vet hur de tog sig ur fängelset, men skurkarna överlevde branden och har sedan den natten hållit ihop. De har
+            gått från stad till stad genom århundra derna och skapat kaos. De åldras inte, de pratar inte, de fruktas vart
+            de än går. Nu har de ett nytt mål. Nolle-p.
+          </p>
+        </div>
       </main>
     </>
   )
