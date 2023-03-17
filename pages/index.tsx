@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { stories } from '@/misc/stories'
+import Character from '@/components/Character';
 
 export default function Home() {
   return (
@@ -19,14 +21,14 @@ export default function Home() {
         </div>
 
         {/* History */}
-        <div className='text-center px-72 pt-4 pb-36'>
+        <div className='text-center m-auto w-1/2 pt-4 pb-36'>
           <h2>HISTORIEN OM SKURKERIET</h2>
           <p>
             Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
-            nå gonsin skådat. Blixten träffade fängelset som skUrkarna satt i och det brann ned. Ryktet säger att det var
+            någonsin skådat. Blixten träffade fängelset som skUrkarna satt i och det brann ned. Ryktet säger att det var
             skurkarna själva som anlade bran den. Sägen säger att en förbannelse lades över skurkar na den natten. Ingen
             vet hur de tog sig ur fängelset, men skurkarna överlevde branden och har sedan den natten hållit ihop. De har
-            gått från stad till stad genom århundra derna och skapat kaos. De åldras inte, de pratar inte, de fruktas vart
+            gått från stad till stad genom århundradena och skapat kaos. De åldras inte, de pratar inte, de fruktas vart
             de än går. Nu har de ett nytt mål. Nolle-p.
           </p>
         </div>
@@ -34,7 +36,17 @@ export default function Home() {
         {/* Characters */}
         <div className='text-center px-10 pb-32'>
           <h4>KLICKA PÅ EN SKURK</h4>
-
+          <div className='w-full grid grid-cols-3'>
+            {stories.map((character, index) => {
+              return (
+                <Character
+                  key={character.id}
+                  id={character.id}
+                  name={character.name}
+                />
+              );
+            })}
+          </div>
         </div>
       </main>
     </>
