@@ -25,7 +25,7 @@ module.exports = {
         'group': "url('/images/group.jpg')"
       },
       height: {
-        'thirdWidth': '26vw' // Make height a third of the width of screen (excluding padding)
+        'thirdWidth': '30vw' // Make height a third of the width of screen (excluding padding)
       }
     },
     screens: {

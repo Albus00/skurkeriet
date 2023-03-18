@@ -9,6 +9,9 @@ type Props = {
 
 
 const Character = (props: Props) => {
+  // Convert linebreak in json to linebreak in the HTML by splitting in into multiple <p> elements
+  const name = props.name;
+  const splitName = name.split('\n').map(str => <p className='text-center' key={str}>{str}</p>);
 
   return (
     <div
@@ -21,15 +24,9 @@ const Character = (props: Props) => {
           backgroundImage: "url(" + `${("/images/characters/" + props.id + ".jpg")}` + ")",
         }}
       >
-        {/* <Image
-          className='object-cover object-center bottom-shadow'
-          src={"/images/characters/" + props.id + ".jpg"}
-          alt={props.name}
-          fill
-        /> */}
       </div>
-      <div className='absolute bottom-0 left-0 right-0'>
-        <h3 className='w-10/12 m-auto text-5xl text-center'>{props.name}</h3>
+      <div className='flex justify-center absolute bottom-0 left-0 right-0 h-36'>
+        <h3 className='text-5xl self-center' id='nameId'>{splitName}</h3>
       </div>
     </div>
   )
