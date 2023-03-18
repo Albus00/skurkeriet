@@ -34,7 +34,7 @@ export default function Home() {
         </div>
 
         {/* Characters */}
-        <div className='text-center px-10 pb-32'>
+        <div className='w-10/12 m-auto text-center px-10 pb-32'>
           <h4>KLICKA PÅ EN SKURK</h4>
           <div className='w-full grid grid-cols-3'>
             {stories.map((character, index) => {
