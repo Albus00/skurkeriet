@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { stories } from '@/misc/stories'
+import { stories } from '@/data/character_data'
 import Character from '@/components/Character';
 
 export default function Home() {
@@ -36,12 +36,13 @@ export default function Home() {
         {/* Characters */}
         <div className='w-10/12 m-auto text-center px-10 pb-32'>
           <h4>KLICKA PÅ EN SKURK</h4>
-          <div className='w-full grid grid-cols-3'>
+          <div className='flex flex-wrap w-full'>
             {stories.map((character, index) => {
               return (
                 <Character
                   key={character.id}
                   id={character.id}
+                  columns={character.columns}
                   name={character.name}
                 />
               );
