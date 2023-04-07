@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import fonts */
-@import url("https://use.typekit.net/nnh8xid.css");                                 /* Adobe fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');   /* Google fonts */
-
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -96,15 +92,18 @@ body {
 
 h1 {
   @apply text-whiteText;
-  @apply font-industry;
+  @apply font-modesto;
+  font-weight: 700;
+  font-style: normal;
   font-size: 6rem;
   line-height: 1;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
 }
 
 h2 {
   @apply text-whiteText;
-  @apply font-industry;
+  @apply font-modesto;
+  font-weight: 700;
   font-size: 3rem;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -113,7 +112,8 @@ h2 {
 
 h3 {
   @apply text-whiteText;
-  @apply font-industry;
+  @apply font-modesto;
+  font-weight: 700;
   font-size: 2.5rem;
   line-height: 1;
   letter-spacing: 0.2em;

@@ -1,44 +1,40 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import { url } from 'inspector'
 
 type Props = {
   id: string
-  columns: string
+  columns: number
   name: string
+  changeDetails: Function
 }
+
 
 
 const Character = (props: Props) => {
   // Convert linebreak in json to linebreak in the HTML by splitting in into multiple <p> elements
   const name = props.name;
-  const splitName = name.split('\n').map(str => <p className='text-center' key={str}>{str}</p>);
+  const splitName = name.split('\n').map(str => <h3 className='text-5xl self-center' key={str}>{str}</h3>);
 
-  const [details, setDetails] = useState({ id })
-
-  const handleClick = () => {
-    setDetails({ ...details, id: props.id })
-  }
-};
-
-return (
-  <div
-    className={"relative h-thirdWidth w-1/" + props.columns}
-    onClick={ }
-  >
-    {/* Set character image with sent id */}
+  return (
     <div
-      className='relative w-full h-5/6 bg-cover bg-center character-shadow'
-      style={{
-        backgroundImage: "url(" + `${("/images/characters/" + props.id + ".jpg")}` + ")",
-      }}
+      className={"relative h-thirdWidth"}
+      style={{ width: props.columns == 2 ? '50%' : '33.33333%' }} // Set width of character card (tailwind class 1/2 and 1/3 was not working for some reason...)
+      onClick={() => { props.changeDetails(props.id) }}           // Change the character details in the sliding box on the home page
     >
-    </div>
-    <div className='justify-center absolute bottom-0 left-0 right-0 h-36'>
-      <h3 className='text-5xl self-center' id='nameId'>{splitName}</h3>
-    </div>
-  </div>
-)
-}
+      {/* Set character image with sent id */}
+      < div
+        className='relative w-full h-5/6 bg-cover bg-center character-shadow'
+        style={{
+          backgroundImage: "url(" + `${("/images/characters/" + props.id + ".jpg")}` + ")",
+        }}
+      >
+        <div className='justify-center flex-col absolute bottom-0 left-0 right-0 h-36'>
+          {splitName}
+          {/* <h3 className='text-5xl self-center' id='nameId'></h3> */}
+        </div>
+      </div >
+    </div >
+  )
+};
 
 export default Character

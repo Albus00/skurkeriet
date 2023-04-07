@@ -3,6 +3,16 @@ import { stories } from '@/data/character_data'
 import Character from '@/components/Character';
 
 export default function Home() {
+
+  function changeDetails(characterId: string) {
+    // Get character details from json file
+    let character = stories.find(stories => stories.id === characterId);
+    if (character) { // Check that character is defined
+      console.log(character.name);
+      console.log(character.story);
+    }
+  }
+
   return (
     <>
       <Head>
@@ -22,7 +32,7 @@ export default function Home() {
 
         {/* History */}
         <div className='text-center m-auto w-1/2 pt-4 pb-36'>
-          <h2>HISTORIEN OM SKURKERIET</h2>
+          {/* <h2>HISTORIEN OM SKURKERIET</h2> */}
           <p>
             Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
             någonsin skådat. Blixten träffade fängelset som skUrkarna satt i och det brann ned. Ryktet säger att det var
@@ -44,6 +54,7 @@ export default function Home() {
                   id={character.id}
                   columns={character.columns}
                   name={character.name}
+                  changeDetails={changeDetails}
                 />
               );
             })}

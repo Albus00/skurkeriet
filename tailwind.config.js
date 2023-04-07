@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'industry': 'Industry Inc Base',
+        // 'industry': 'Industry Inc Base',
+        'modesto': 'modesto-condensed',
         'roboto': "'Roboto', sans-serif",
         'vinyl': 'Rubik Vinyl'
       },
