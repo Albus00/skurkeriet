@@ -17,20 +17,19 @@ const Character = (props: Props) => {
 
   return (
     <div
-      className={"relative h-thirdWidth px-2 mb-12"}
+      className={"relative px-2 mb-32"}
       style={{ width: props.columns == "2" ? '50%' : '33.33333%' }} // Set width of character card (tailwind class 1/2 and 1/3 was not working for some reason...)
       onClick={() => { props.changeDetails(props.id) }}           // Change the character details in the sliding box on the home page
     >
       {/* Set character image with sent id */}
       < div
-        className='relative w-full h-5/6 bg-cover bg-center character-shadow'
+        className='relative w-full h-thirdWidth bg-cover bg-center character-shadow'
         style={{
-          backgroundImage: "url(" + `${("/images/characters/" + props.id + ".jpg")}` + ")",
+          backgroundImage: "url(" + `${("/images/characters/" + props.id + ".jpg")}` + ")", // Set character image as background
         }}
       >
-
       </div >
-      <div className='justify-center flex-col absolute bottom-0 left-0 right-0'>
+      <div className='justify-center flex-col pt-5'>
         {splitName}
       </div>
     </div >

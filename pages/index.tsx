@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import Head from 'next/head'
 import { stories } from '@/data/character_data'
 import Character from '@/components/Character';
+import Character_details from '@/components/Character_details';
 
 export default function Home() {
+  const [characterDetails, SetCharacterDetails] = useState({ name: 'dummy', story: 'dumber' })
 
   function changeDetails(characterId: string) {
     // Get character details from json file
@@ -10,7 +13,9 @@ export default function Home() {
     if (character) { // Check that character is defined
       console.log(character.name);
       console.log(character.story);
+      SetCharacterDetails(character);
     }
+
   }
 
   return (
@@ -60,6 +65,12 @@ export default function Home() {
             })}
           </div>
         </div>
+
+        {/* Character Details Box */}
+        <Character_details
+          id={characterDetails.id}
+          name={characterDetails.name}
+          story={characterDetails.story} />
       </main>
     </>
   )
