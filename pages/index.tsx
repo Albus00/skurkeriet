@@ -5,7 +5,7 @@ import Character from '@/components/Character';
 import Character_details from '@/components/Character_details';
 
 export default function Home() {
-  const [characterDetails, SetCharacterDetails] = useState({ name: 'dummy', story: 'dumber' })
+  const [characterDetails, SetCharacterDetails] = useState({ id: 'iddd', name: 'dummy', story: 'dumber' })
 
   function changeDetails(characterId: string) {
     // Get character details from json file
