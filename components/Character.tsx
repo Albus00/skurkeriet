@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 type Props = {
   id: string
-  columns: number
+  columns: string
   name: string
   changeDetails: Function
 }
@@ -17,8 +17,8 @@ const Character = (props: Props) => {
 
   return (
     <div
-      className={"relative h-thirdWidth"}
-      style={{ width: props.columns == 2 ? '50%' : '33.33333%' }} // Set width of character card (tailwind class 1/2 and 1/3 was not working for some reason...)
+      className={"relative h-thirdWidth px-2 mb-12"}
+      style={{ width: props.columns == "2" ? '50%' : '33.33333%' }} // Set width of character card (tailwind class 1/2 and 1/3 was not working for some reason...)
       onClick={() => { props.changeDetails(props.id) }}           // Change the character details in the sliding box on the home page
     >
       {/* Set character image with sent id */}
@@ -28,11 +28,11 @@ const Character = (props: Props) => {
           backgroundImage: "url(" + `${("/images/characters/" + props.id + ".jpg")}` + ")",
         }}
       >
-        <div className='justify-center flex-col absolute bottom-0 left-0 right-0 h-36'>
-          {splitName}
-          {/* <h3 className='text-5xl self-center' id='nameId'></h3> */}
-        </div>
+
       </div >
+      <div className='justify-center flex-col absolute bottom-0 left-0 right-0'>
+        {splitName}
+      </div>
     </div >
   )
 };

@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* History */}
         <div className='text-center m-auto w-1/2 pt-4 pb-36'>
-          {/* <h2>HISTORIEN OM SKURKERIET</h2> */}
+          <h2>HISTORIEN OM SKURKERIET</h2>
           <p>
             Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
             någonsin skådat. Blixten träffade fängelset som skUrkarna satt i och det brann ned. Ryktet säger att det var
@@ -44,10 +44,10 @@ export default function Home() {
         </div>
 
         {/* Characters */}
-        <div className='w-10/12 m-auto text-center px-10 pb-32'>
+        <div className='w-full m-auto text-center px-5 pb-32'>
           <h4>KLICKA PÅ EN SKURK</h4>
           <div className='flex flex-wrap w-full'>
-            {stories.map((character, index) => {
+            {stories.map((character) => {
               return (
                 <Character
                   key={character.id}
