@@ -3,19 +3,25 @@ import Head from 'next/head'
 import { stories } from '@/data/character_data'
 import Character from '@/components/Character';
 import Character_details from '@/components/Character_details';
+import { useScrollBlock } from '@/functions/useScrollBlock';
 
 export default function Home() {
-  const [characterDetails, SetCharacterDetails] = useState({ id: 'iddd', name: 'dummy', story: 'dumber' })
+  // Import the scroll block funtions
+  const [blockScroll, allowScroll] = useScrollBlock();
 
+  const [characterDetails, SetCharacterDetails] = useState({ id: 'allie', name: '[name]', story: '[story]' })
+  const [renderDetails, SetRenderDetails] = useState(false); // Decides whether the character details box should be rendered
+
+  // Called when clicking on a character
   function changeDetails(characterId: string) {
     // Get character details from json file
     let character = stories.find(stories => stories.id === characterId);
     if (character) { // Check that character is defined
-      console.log(character.name);
-      console.log(character.story);
-      SetCharacterDetails(character);
+      SetCharacterDetails(character); // Set the character details with useState
     }
 
+    SetRenderDetails(true);   // Render the details box
+    blockScroll();            // Block the user from scrolling the background when character details is open
   }
 
   return (
@@ -68,6 +74,7 @@ export default function Home() {
 
         {/* Character Details Box */}
         <Character_details
+          condition={renderDetails}
           id={characterDetails.id}
           name={characterDetails.name}
           story={characterDetails.story} />
