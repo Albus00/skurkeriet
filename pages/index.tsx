@@ -13,7 +13,7 @@ export default function Home() {
   const [renderDetails, SetRenderDetails] = useState(false); // Decides whether the character details box should be rendered
 
   // Called when clicking on a character
-  function changeDetails(characterId: string) {
+  function openDetails(characterId: string) {
     // Get character details from json file
     let character = stories.find(stories => stories.id === characterId);
     if (character) { // Check that character is defined
@@ -22,6 +22,11 @@ export default function Home() {
 
     SetRenderDetails(true);   // Render the details box
     blockScroll();            // Block the user from scrolling the background when character details is open
+  }
+
+  function closeDetails() {
+    allowScroll();
+    SetRenderDetails(false);   // Render the details box
   }
 
   return (
@@ -65,7 +70,7 @@ export default function Home() {
                   id={character.id}
                   columns={character.columns}
                   name={character.name}
-                  changeDetails={changeDetails}
+                  changeDetails={openDetails}
                 />
               );
             })}
@@ -75,6 +80,7 @@ export default function Home() {
         {/* Character Details Box */}
         <Character_details
           condition={renderDetails}
+          SetCondition={closeDetails}
           id={characterDetails.id}
           name={characterDetails.name}
           story={characterDetails.story} />
