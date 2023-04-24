@@ -4,6 +4,9 @@ import { stories } from '@/data/character_data'
 import Character from '@/components/Character';
 import Character_details from '@/components/Character_details';
 import { useScrollBlock } from '@/functions/useScrollBlock';
+import Image from 'next/image';
+import Socials_image from '@/components/Socials_image';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   // Import the scroll block funtions
@@ -20,13 +23,13 @@ export default function Home() {
       SetCharacterDetails(character); // Set the character details with useState
     }
 
-    SetRenderDetails(true);   // Render the details box
+    SetRenderDetails(true);   // Render the details panel
     blockScroll();            // Block the user from scrolling the background when character details is open
   }
 
-  function closeDetails() {
-    allowScroll();
-    SetRenderDetails(false);   // Render the details box
+  async function closeDetails() {
+    allowScroll();            // Allow scrolling when closing the details panel
+    SetRenderDetails(false);  // Remove the details panel
   }
 
   return (
@@ -60,9 +63,10 @@ export default function Home() {
         </div>
 
         {/* Characters */}
-        <div className='w-full m-auto text-center px-5 pb-32'>
+        <div className='w-full m-auto text-center px-5 pb-10'>
           <h4>KLICKA PÅ EN SKURK</h4>
           <div className='flex flex-wrap w-full'>
+            {/* Generate character cards from the stories JSON file */}
             {stories.map((character) => {
               return (
                 <Character
@@ -84,6 +88,83 @@ export default function Home() {
           id={characterDetails.id}
           name={characterDetails.name}
           story={characterDetails.story} />
+
+        {/* Game rules */}
+        <div className='m-auto w-3/5 pt-4 pb-36'>
+          <h2>SPELREGLER</h2>
+          <p>
+            Som Nollan vet (eller åtminstone kommer att lära sig), så älskar Phadderister att leka. Skurkeriet vill därför introducera Phadderistspelet.
+            Ett spel där Nollan genom att samla idolkort kan lära känna Phadderister och andra Nollan.<br />
+            <br />
+          </p>
+          <h5>NOLLAN BEHÖVER</h5>
+          <ul className='list-disc pl-[20px]'>
+            <li>Tre idolkort. Om Nollan har fler än så får Nollan välja ut tre kort att spela med</li>
+            <li>En annan Nollan.</li>
+          </ul>
+          <br />
+          <h5>SÅ HÄR SPELAR NOLLAN</h5>
+          <p>
+            Varje Nollan tar sina tre kort och studerar dem. Phadderistspelet handlar om såväl tur som skicklighet. Försök lägga kortens färdighetspoäng
+            på minnet. Vänd sedan på korten så att avigsidan hamnar uppåt och blanda. Framför vardera Nollan ligger nu en hög med tre kort i okänd ordning.
+            Utse vem av Nollan som ska börja – Spelare 1.
+            <br />
+            Spelare I bestämmer vilken av de tre färdigheterna 1, 2 eller 3 som ska spelas ut först. På given signal vänder båda Nollan upp sitt översta
+            kort i högen. Nollan med högst färdighetspoäng på den valda färdigheten 1,2 eller 3 vinner omgången. Nu är det spelare II:s tur att bestämma
+            vilken av de resterande färdigheterna som ska spelas ut. Här kan spelare II tänka taktiskt och försöka komma ihåg hur många färdighetspoäng
+            kvarvarande idolkort har. Förslagsvis väljer spelare II att spela ut en färdighet som har höga poäng på båda korten.<br />
+            <br />
+            På given signal vänder båda Nollan upp det översta kortet i högen. Nollan med högst färdighetspoäng på den valda färdigheten 1,2 eller 3
+            vinner andra omgången. Om en av Nollan har vunnit båda omgångarna är spelet slut. Om Nollan har vunnit en gång var fortsätter spelet.<br />
+            <br />
+            Nu återstår bara en färdighet att spelas ut. På given signal vänder båda Nollan upp det sista kortet i högen. Om Nollan av en händelse
+            skulle vinna lika många omgångar var vinner den som har flest använda färdighetspoäng.
+          </p>
+          <Image
+            src="/images/rules.jpg"
+            alt="All makt åt Tengil"
+            width="1200"
+            height="500"
+            className=' character-shadow mt-6'
+          />
+        </div>
+
+        {/* Social medias */}
+        <div className='text-center m-auto pt-4 pb-64'>
+          <h2>SOCIALA MEDIER</h2>
+          <p className='text-center'>
+            psst...<br />
+            <br />
+            Enligt rykten kan det vara bra att Nollan har en god sikt <br />
+            på våra sociala medier för lite &quot;behind the scenes&quot;...
+          </p>
+          <div className='flex justify-center pt-10'>
+            <Socials_image company='facebook' link='https://www.facebook.com/Skurkeriet' />
+            <Socials_image company='instagram' link='https://www.instagram.com/skurkeriet2324/' />
+          </div>
+        </div>
+
+        {/* Tengil */}
+        <div className='text-center m-auto w-1/3 pt-4 pb-36'>
+          <h2 className='font-vinyl'>ALL MAKT ÅT TENGIL</h2>
+          <p>
+            All makt åt Tengil, vår Befriare. Vid tidens begynnelse, strax innan Big Bang, steg ett mäktigt väsen fram ur skuggorna. Det som givit styrka
+            och hopp åt Skurkarna. Detta väsen, Tengil, tog formen av en ståtlig maniken för att nå er alldagliga! Tengil höjer Skurkeriets omoral och
+            beskyddar dess handlingar. Han höljer Skurkarnas själar i skuggor och fyller deras hjärtan med ofog. Skurkeriet bär med sig Tengils avatar
+            från och till, men frukta ej! Tengil har trots sitt hårda yttre en av de stillsammaste själar. Nollan löper ingen risk att utsättas för Tengils
+            vrede. Sanningen är dock att ingen vet vad Tengil planerar i skuggorna annat än han själv.<br />
+            <br />
+            P.S also good at parties.
+          </p>
+          <Image
+            src="/images/tengil.png"
+            alt="All makt åt Tengil"
+            width="700"
+            height="200"
+            className='mt-10'
+          />
+        </div>
+        <Footer />
       </main>
     </>
   )

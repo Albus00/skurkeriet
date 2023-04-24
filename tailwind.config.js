@@ -14,7 +14,8 @@ module.exports = {
         // 'industry': 'Industry Inc Base',
         'modesto': 'modesto-condensed',
         'roboto': "'Roboto', sans-serif",
-        'vinyl': 'Rubik Vinyl'
+        'vinyl': 'Rubik Vinyl',
+        'cascadia': 'Cascadia'
       },
       colors: {
         black: '#030302',

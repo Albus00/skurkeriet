@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 type Props = {
   id: string
@@ -16,15 +15,18 @@ const Character = (props: Props) => {
   const splitName = name.split('\n').map(str => <h3 className='text-5xl self-center' key={str}>{str}</h3>);
   const imageSrc = "/images/characters/" + props.id + ".jpg";
 
+
   return (
     <div
-      className={"relative px-2 mb-32 cursor-pointer"}
+      className={
+        "relative px-2 mb-32 hover:cursor-pointer"}
       style={{ width: props.columns == "2" ? '50%' : '33.33333%' }} // Set width of character card (tailwind class 1/2 and 1/3 was not working for some reason...)
       onClick={() => { props.changeDetails(props.id) }}           // Change the character details in the sliding box on the home page
     >
       {/* Set character image with sent id */}
       < div
-        className='relative w-full h-thirdWidth bg-cover bg-center character-shadow'
+        className='relative w-full h-thirdWidth bg-cover bg-center character-shadow ease-linear duration-300
+        hover:scale-[1.02] hover:opacity-75'
         style={{
           backgroundImage: "url(" + imageSrc + ")", // Set character image as background
         }}
