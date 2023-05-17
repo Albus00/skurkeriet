@@ -98,6 +98,7 @@ h1 {
   font-size: 6rem;
   line-height: 1;
   letter-spacing: 0.3em;
+  margin-right: -0.3em;   /* To counteract the letter-spacing on the last letter */
 }
 
 h2 {
@@ -106,6 +107,7 @@ h2 {
   font-size: 3rem;
   line-height: 1;
   letter-spacing: 0.1em;
+  margin-right: -0.1em;   /* To counteract the letter-spacing on the last letter */
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -116,6 +118,7 @@ h3 {
   font-size: 2.5rem;
   line-height: 1;
   letter-spacing: 0.2em;
+  margin-right: -0.2em;   /* To counteract the letter-spacing on the last letter */
 }
 
 h4 {
@@ -124,6 +127,7 @@ h4 {
   font-weight: bold;
   line-height: 1;
   letter-spacing: 0.1em;
+  margin-right: -0.1em;   /* To counteract the letter-spacing on the last letter */
   margin-bottom: 2rem;
 }
 
@@ -131,6 +135,7 @@ h5 {
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 0.1em;
+  margin-right: -0.1em;   /* To counteract the letter-spacing on the last letter */
   margin-bottom: 0.2rem;
 }
 

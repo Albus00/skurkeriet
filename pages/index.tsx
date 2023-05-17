@@ -1,16 +1,26 @@
 import { useState } from 'react';
 import Head from 'next/head'
+import Image from 'next/image';
+import { useScrollBlock } from '@/hooks/useScrollBlock';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import useFitText from "use-fit-text";
+
 import { stories } from '@/data/character_data'
 import Character from '@/components/Character';
 import Character_details from '@/components/Character_details';
-import { useScrollBlock } from '@/functions/useScrollBlock';
-import Image from 'next/image';
 import Socials_image from '@/components/Socials_image';
 import Footer from '@/components/Footer';
+import Character_mobile from '@/components/Character_mobile';
 
 export default function Home() {
   // Import the scroll block funtions
   const [blockScroll, allowScroll] = useScrollBlock();
+
+  // Import font size scaling for mobile
+  const { fontSize, ref } = useFitText();
+
+  // Check if user is on mobile device
+  let isMobile = useMediaQuery("(max-width: 640px)");
 
   const [characterDetails, SetCharacterDetails] = useState({ id: 'allie', name: '[name]', story: '[story]' })
   const [renderDetails, SetRenderDetails] = useState(false); // Decides whether the character details box should be rendered
@@ -44,13 +54,16 @@ export default function Home() {
         {/* Group image */}
         <div className='flex flex-col-reverse items-center h-screen w-screen bg-group bg-cover bg-center bottom-shadow'>
           <div className='text-whiteText text-center h-2/5'>
-            <h1 className='mb-5'>SKURKERIET</h1>
-            <h3>NOLLEP SKA BLI VÅRT</h3>
+            <h1 className='mb-5 mobile:text-5xl mobile:mb-0' >SKURKERIET</h1>
+            <h3 className='mobile:text-3xl'>NOLLEP SKA BLI VÅRT</h3>
           </div>
         </div>
 
         {/* History */}
-        <div className='text-center m-auto w-1/2 pt-4 pb-36'>
+        <div className='
+          text-center m-auto w-1/2 pt-4 pb-36
+          mobile:w-10/12
+          '>
           <h2>HISTORIEN OM SKURKERIET</h2>
           <p>
             Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
@@ -64,18 +77,27 @@ export default function Home() {
 
         {/* Characters */}
         <div className='w-full m-auto text-center px-5 pb-10'>
-          <h4>KLICKA PÅ EN SKURK</h4>
+          {isMobile ? ("") : (<h4>KLICKA PÅ EN SKURK</h4>)}
           <div className='flex flex-wrap w-full'>
             {/* Generate character cards from the stories JSON file */}
+
             {stories.map((character) => {
-              return (
-                <Character
+              return (isMobile ?
+                (<Character
                   key={character.id}
                   id={character.id}
                   columns={character.columns}
                   name={character.name}
                   changeDetails={openDetails}
-                />
+                />)
+                :
+                (<Character_mobile
+                  key={character.id}
+                  id={character.id}
+                  columns={""}
+                  name={character.name}
+                  changeDetails={openDetails}
+                />)
               );
             })}
           </div>
