@@ -3,15 +3,11 @@
 import { useState } from 'react';
 import { stories } from '@/data/character_data'
 import { useScrollBlock } from '@/hooks/useScrollBlock';
-import Footer from '@/components/Footer';
 import Character_details from '@/components/Character_details';
 import Content from './Content';
 
 export default function Page() {
-  // Randomize the visibility for the sponsor logo that has only paid for the "slumpad" tier
-  const logoVisible = Math.random() < 0.5;
-
-  // Import the scroll block funtions
+  // Import the scroll block functions
   const [blockScroll, allowScroll] = useScrollBlock();
 
   const [characterDetails, SetCharacterDetails] = useState({ id: 'allie', name: '[name]', story: '[story]' })

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Character from '@/components/Character';
 import Socials_image from '@/components/Socials_image';
 import { stories } from '@/data/character_data'
+import Sponsor from '@/components/Sponsor';
 
 type Props = {
   openDetails: Function
@@ -90,7 +91,7 @@ const Content = (props: Props) => {
       </div>
 
       {/* Social medias */}
-      <div className='text-center m-auto pt-4 pb-64'>
+      <div className='text-center m-auto w-2/3 pt-4 pb-64'>
         <h2>SOCIALA MEDIER</h2>
         <p className='text-center'>
           psst...<br />
@@ -123,6 +124,17 @@ const Content = (props: Props) => {
           height="200"
           className='mt-10'
         />
+      </div>
+
+      {/* Sponsors */}
+      <div className="
+      flex flex-wrap justify-evenly items-center w-full py-20 px-32
+      handheld:px-20 handheld:flex-col handheld:space-y-10
+      mobile:px-8   
+      ">
+        <Sponsor company="ICA" className="grow-1 h-52 w-1/3 mobile:w-3/5" random={false} />
+        <Sponsor company="NAB" className="grow-1 h-48 w-1/3 mobile:w-3/5" random={true} />
+        <Sponsor company="Micropower" className="grow-2 h-48 w-2/3 mobile:w-full" random={false} />
       </div>
     </div>
   )
