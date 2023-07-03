@@ -55,6 +55,5 @@ const Character_details = (props: Props) => {
     </div>
   )
 }
-//TODO: Add X button to close the panel
 
 export default Character_details
