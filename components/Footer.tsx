@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+
 import Marquee from "react-fast-marquee";
 
 type Props = {}

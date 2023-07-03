@@ -1,6 +1,7 @@
 // Shamelessly stolen from GitHub user reecelucas
 // https://gist.github.com/reecelucas/2f510e6b8504008deaaa52732202d2da
 
+'use client'
 import { useRef } from "react"
 
 const useScrollBlock = () => {
