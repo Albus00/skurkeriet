@@ -11,16 +11,9 @@ type Props = {
 const Content = (props: Props) => {
   return (
     <div>
-      {/* Group image */}
-      <div className='flex flex-col-reverse items-center h-screen w-screen bg-group bg-cover bg-center bottom-shadow'>
-        <div className='text-whiteText text-center h-2/5'>
-          <h1 className='mb-5'>SKURKERIET</h1>
-          <h3>NOLLEP SKA BLI VÅRT</h3>
-        </div>
-      </div>
-
       {/* History */}
-      <div className='text-center m-auto w-1/2 pt-4 pb-36'>
+      <div className='text-center m-auto w-1/2 pt-4 pb-36
+        handheld:w-4/5'>
         <h2>HISTORIEN OM SKURKERIET</h2>
         <p>
           Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
@@ -33,9 +26,9 @@ const Content = (props: Props) => {
       </div>
 
       {/* Characters */}
-      <div className='w-full m-auto text-center px-5 pb-10'>
-        <h4>KLICKA PÅ EN SKURK</h4>
-        <div className='flex flex-wrap w-full'>
+      <div className='w-full m-auto text-center px-5 pb-10 handheld:px-0'>
+        <h5 className='handheld:hidden'>KLICKA PÅ EN SKURK</h5>
+        <div className='flex flex-wrap w-full handheld:flex-col'>
           {/* Generate character cards from the stories JSON file */}
           {stories.map((character) => {
             return (
@@ -51,20 +44,20 @@ const Content = (props: Props) => {
         </div>
       </div>
       {/* Game rules */}
-      <div className='m-auto w-3/5 pt-4 pb-36'>
+      <div className='m-auto w-3/5 pt-4 pb-36 handheld:w-4/5'>
         <h2>SPELREGLER</h2>
         <p>
           Som Nollan vet (eller åtminstone kommer att lära sig), så älskar Phadderister att leka. Skurkeriet vill därför introducera Phadderistspelet.
           Ett spel där Nollan genom att samla idolkort kan lära känna Phadderister och andra Nollan.<br />
           <br />
         </p>
-        <h5>NOLLAN BEHÖVER</h5>
+        <h6>NOLLAN BEHÖVER</h6>
         <ul className='list-disc pl-[20px]'>
           <li>Tre idolkort. Om Nollan har fler än så får Nollan välja ut tre kort att spela med</li>
           <li>En annan Nollan.</li>
         </ul>
         <br />
-        <h5>SÅ HÄR SPELAR NOLLAN</h5>
+        <h6>SÅ HÄR SPELAR NOLLAN</h6>
         <p>
           Varje Nollan tar sina tre kort och studerar dem. Phadderistspelet handlar om såväl tur som skicklighet. Försök lägga kortens färdighetspoäng
           på minnet. Vänd sedan på korten så att avigsidan hamnar uppåt och blanda. Framför vardera Nollan ligger nu en hög med tre kort i okänd ordning.
@@ -83,10 +76,10 @@ const Content = (props: Props) => {
         </p>
         <Image
           src="/images/rules.jpg"
-          alt="All makt åt Tengil"
+          alt="Regler"
           width="1200"
           height="500"
-          className=' character-shadow mt-6'
+          className='mt-6'
         />
       </div>
 
@@ -106,7 +99,7 @@ const Content = (props: Props) => {
       </div>
 
       {/* Tengil */}
-      <div className='text-center m-auto w-1/3 pt-4 pb-36'>
+      <div className='text-center m-auto w-1/3 pt-4 pb-36 handheld:w-4/5'>
         <h2 className='font-vinyl'>ALL MAKT ÅT TENGIL</h2>
         <p>
           All makt åt Tengil, vår Befriare. Vid tidens begynnelse, strax innan Big Bang, steg ett mäktigt väsen fram ur skuggorna. Det som givit styrka

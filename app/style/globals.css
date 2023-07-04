@@ -4,46 +4,30 @@
 
 @layer base {
   h1 {
-    @apply font-modesto;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 6rem;
-    line-height: 1;
-    letter-spacing: 0.3em;
+    @apply font-modesto font-bold text-8xl leading-none tracking-[0.3em] text-center
+    handheld:text-6xl handheld:tracking-[0.1em];
   }
 
   h2 {
-    @apply font-modesto;
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    margin-bottom: 2rem;
-    text-align: center;
+    @apply font-modesto font-bold text-5xl leading-none tracking-widest mb-8 text-center
+    handheld:text-4xl;
   }
 
   h3 {
-    @apply font-modesto;
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 1;
-    letter-spacing: 0.2em;
+    @apply font-modesto font-bold text-4xl leading-none tracking-[0.2em]
+    handheld:text-2xl;
   }
 
   h4 {
-    @apply text-whiteText;
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    margin-bottom: 2rem;
+    @apply font-modesto font-bold text-5xl leading-none tracking-[0.2em];
   }
 
   h5 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.2rem;
+    @apply text-whiteText font-bold text-2xl leading-none tracking-widest mb-8;
+  }
+
+  h6 {
+    @apply font-bold text-xl tracking-widest;
   }
 
   p {
@@ -73,7 +57,7 @@
 
 html,
 body {
-  @apply font-roboto;
+  @apply font-indivisible;
   @apply text-whiteText;
   @apply bg-black;
   max-width: 100vw;
@@ -84,6 +68,14 @@ body {
   -moz-box-shadow: inset 0 -450px 400px -200px #030302;
   -webkit-box-shadow: inset 0 -450px 400px -200px #030302;
   box-shadow: inset 0 -450px 400px -50px #030302;
+}
+
+@responsive {   /* Makes custom classes work with Tailwinds responsive design (eg. "handheld:...") */
+  .bottom-shadow-mobile {
+    -moz-box-shadow: inset 0 -250px 200px -10px #030302;
+    -webkit-box-shadow: inset 0 -250px 200px -10px #030302;
+    box-shadow: inset 0 -60px 50px -10px #030302;
+  }
 }
 
 .top-shadow {
@@ -97,8 +89,18 @@ body {
   -webkit-box-shadow: inset 0 0 10px 15px #030302;
   box-shadow: inset 0 0 10px 15px #030302;
   /* Removes the outline at the edge of the image */
-  background-clip: content-box;                     
+  background-clip: content-box;
   padding: 4px;
+}
+@responsive {
+  .character-shadow-mobile {
+    -moz-box-shadow: inset 0 0 10px 15px #030302;
+    -webkit-box-shadow: inset 0 0 10px 15px #030302;
+    box-shadow: inset 0 0 10px 15px #030302, inset 0 0 30px 30px #030302;
+    /* Removes the outline at the edge of the image */
+    background-clip: content-box;
+    padding: 4px;
+  }
 }
 .large-character-shadow {
   -moz-box-shadow: inset 0 0 15px 25px #030302;

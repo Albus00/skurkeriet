@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import './style/globals.css'
+import './style/fonts.css'
 
 // TODO:Add favicon
 export const metadata = {

@@ -17,7 +17,8 @@ const Socials_image = (props: Props) => {
         width="150"
         height="150"
         className='mx-10 ease-linear duration-300
-        hover:cursor-pointer hover:shadow-xl hover:scale-105 hover:opacity-80'
+        hover:cursor-pointer hover:shadow-xl hover:scale-105 hover:opacity-80
+        mobile:w-20 mobile:mx-4'
       />
     </a>
   )

@@ -13,7 +13,7 @@ module.exports = {
       fontFamily: {
         // 'industry': 'Industry Inc Base',
         'modesto': 'modesto-condensed',
-        'roboto': "'Roboto', sans-serif",
+        'indivisible': 'indivisible, sans-serif',
         'vinyl': 'Rubik Vinyl',
         'cascadia': 'Cascadia'
       },
@@ -24,13 +24,15 @@ module.exports = {
         whiteText: '#E3E3E3'
       },
       backgroundImage: {
-        'group': "url('/images/group.jpg')"
+        'group': "url('/images/group.jpg')",
+        'groupMobile': "url('/images/group-mobile.jpg')"
       },
       height: {
         'thirdWidth': '30vw' // Make height a third of the width of screen (excluding padding)
       }
     },
     screens: {
+      desktop: { 'min': '1225px' },
       handheld: { 'max': '1024px' },
       mobile: { 'max': '750px' },
       thin: { 'max': '340px' }

@@ -1,4 +1,5 @@
-import React from 'react'
+import Details_button from "./Details_button"
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type Props = {
   id: string
@@ -12,30 +13,41 @@ type Props = {
 const Character = (props: Props) => {
   // Convert linebreak in json to linebreak in the HTML by splitting in into multiple <p> elements
   const name = props.name;
-  const splitName = name.split('\n').map(str => <h3 className='text-5xl self-center' key={str}>{str}</h3>);
+  const splitName = name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
   const imageSrc = "/images/characters/" + props.id + ".jpg";
+
+  const isMobile = useMediaQuery('(max-width: 1024px)')
+
+  function handleClick(type: string) {
+    // Dont trigger the div OnClick when on mobile. Should only work when pressing the button on mobile
+    if ((isMobile && type === 'button') || !isMobile) {
+      props.changeDetails(props.id)
+    }
+  }
 
 
   return (
     <div
       className={
-        "relative px-2 mb-32 hover:cursor-pointer"}
-      style={{ width: props.columns == "2" ? '50%' : '33.33333%' }} // Set width of character card (tailwind class 1/2 and 1/3 was not working for some reason...)
-      onClick={() => { props.changeDetails(props.id) }}           // Change the character details in the sliding box on the home page
+        "relative px-2 mb-32 hover:cursor-pointer " + (props.columns == "2" ? 'w-1/2' : 'w-1/3') +
+        " handheld:w-full handheld:px-0 handheld:mb-0 handheld:h-screen"}
+      onClick={() => { handleClick("area") }}           // Change the character details in the sliding box on the home page
     >
       {/* Set character image with sent id */}
-      < div
+      <div
         className='relative w-full h-thirdWidth bg-cover bg-center character-shadow ease-linear duration-300
-        hover:scale-[1.02] hover:opacity-75'
+        desktop:hover:scale-[1.02] desktop:hover:opacity-75 
+        handheld:h-4/6 handheld:character-shadow-mobile'
         style={{
           backgroundImage: "url(" + imageSrc + ")", // Set character image as background
         }}
       >
       </div >
-      <div className='justify-center flex-col pt-5'>
+      <div className='justify-center flex-col pt-5 handheld:pt-0'>
         {splitName}
+        <Details_button handleClick={handleClick} />
       </div>
-    </div >
+    </div>
   )
 };
 

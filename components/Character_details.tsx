@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import closeIcon from "icons/close.svg"
+import arrowIcon from "icons/arrow.svg"
 
 type Props = {
   condition: boolean
@@ -8,6 +9,7 @@ type Props = {
   id: string
   name: string
   story: string
+  isMobile: boolean
 }
 
 const Character_details = (props: Props) => {
@@ -29,26 +31,44 @@ const Character_details = (props: Props) => {
       onClick={handleClick}
     >
       <div className='absolute bottom-0 bg-black h-4/5 w-screen flex top-shadow py-5'>
-        <div
-          // Padding left:10px is used to match upp the image with the images in the background (which uses another shadow width)
-          className='w-1/3 bg-cover bg-center large-character-shadow ml-[10px]'
-          style={{
-            backgroundImage: "url(" + imageSrc + ")", // Set character image as background
-          }}
-        />
-        <div className='w-2/3 px-10 pt-10'>
-          <div className='relative'>
-            <h2 className='text-center text-7xl'>{props.name}</h2>
-            <Image
-              priority
-              width={35}
-              height={35}
-              src={closeIcon}
-              alt="Stäng"
-              className="absolute right-0 top-0 hover:cursor-pointer"
-              onClick={handleClick}
-            />
-          </div>
+
+        {/* Image */}
+        {!props.isMobile ? (
+          <div
+            // Padding left:10px is used to match upp the image with the images in the background (which uses another shadow width)
+            className='w-1/3 bg-cover bg-center large-character-shadow ml-[10px]'
+            style={{
+              backgroundImage: "url(" + imageSrc + ")", // Set character image as background
+            }}
+          />
+        ) : null}
+
+        {/* Story */}
+        <div className='w-2/3 px-10 pt-10 mobile:w-full mobile:overflow-auto mobile:pt-0'>
+          {!props.isMobile ? (
+            <div className='relative'>
+              <h2 className='text-center text-7xl'>{props.name}</h2>
+              <Image
+                width={35}
+                height={35}
+                src={closeIcon}
+                alt="Stäng"
+                className="absolute right-0 top-0 hover:cursor-pointer"
+                onClick={handleClick}
+              />
+            </div>
+          ) : (
+            <div className='relative mb-5'>
+              <Image
+                width={40}
+                height={40}
+                src={arrowIcon}
+                alt="Stäng"
+                className="m-auto"
+                onClick={handleClick}
+              />
+            </div>
+          )}
           {splitStory}
         </div>
       </div>
