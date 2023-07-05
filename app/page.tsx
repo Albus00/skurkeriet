@@ -9,7 +9,7 @@ export default function Page() {
   const router = useRouter();
   const [password, setPassword] = useState('');
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setPassword(event.target.value);
   };
 
