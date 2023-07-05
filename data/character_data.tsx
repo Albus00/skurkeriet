@@ -1,10 +1,10 @@
 export const stories = [
   {
-    id: "allie",
+    id: "regina",
     columns: "3",
-    name: "Allie\nMcTottengil",
+    name: "Regina\nZéralth ",
     story:
-      "Den alltid lika charmiga Allie har haft många efternamn genom tiderna. Hon reste från stad till stad som ung och gång på gång föll herrarna för hennes utstrålning. En efter en försvann herrgårdsägarna efter bröllopen och listan på efternamn blev längre och längre. Ingen vet hur eller vart de tog vägen, men Allie samlade på sig mer än bara efternamn. Pengar i mängder, herrgårdar och konstverk, allt blev hennes. När hennes sjunde man plötsligt insjuknade och avled i en “influensa” var Allie förkrossad. Det sägs att denne man, Mr McTottengill, var hennes sanna kärlek. Mr McTottengill var en man utan dess like. Han var mörk och mystisk i sitt sätt. Ingen visste riktigt var de hade honom, förutom Allie, som hade honom runt sitt lillfinger. McTottengil paret startade en firma där de tvättade pengar genom sin hästförsäljning, men sanningen om vart ifrån pengarna kom fick ingen någonsin reda på. Efter Mr McTottengills död drog sig Allie tillbaka. Hon flyttade långt ut på landet och bodde med sina hästar. Hennes rikedom gömdes någonstans. Pengar intresserade henne inte längre. Hon hade haft all kontroll i McTottengill imperiet, men när hennes man dog såg ingen henne längre som en lämplig affärspartner. Hon saknade makten och hon var rasande. Hon planerade det perfekta brottet för att hamna i det värsta fängelse man kunde tänka sig, allt för att samla ihop den perfekta gruppen skurkar för att få sin hämnd…",
+      "Drottning Regina Zéralth hade alltid längtat efter makt och kontroll. Redan som ung flicka insåg hon att hon hade en gåva - en skarp intelligens och förmåga att manipulera människorna runt omkring sig. Hon använde dessa egenskaper till sin fördel och steg snabbt i rang i kungahuset. När hon till slut blev drottning, var hon redan en maktgalen och manipulativ ledare.\nHon insåg tidigt att ljusets utveckling hotade hennes makt och såg Norrköpings Nolle-P som den perfekta platsen att sätta stopp för det. Hon började planera i hemlighet och samlade en grupp av rikets mest intelligenta och lojala personer, som hon visste skulle följa henne till slutet.\nDrottning Regina Zéralth var beredd att göra allt som krävdes för att ta över Nolle-P och återupprätta mörkrets makt. Hennes manipulation och listighet skulle visa sig vara avgörande i kampen mot ljuset.",
   },
   {
     id: "clint",
@@ -14,11 +14,11 @@ export const stories = [
       "Det är ingen slump att Clint Wood har fått smeknamnet Beast. Med hans djärva metoder och agera först, tänk sen attityd har Clint blivit ökänd som en utav de mest hänsynslösa torpedernai den vilda västern. Efter ett rån gått fel, och en förrädisk före detta arbetsgivare, så söker Clint inte bara efter nya jobbmöjligheter, utan också för hämnd.",
   },
   {
-    id: "mitty",
+    id: "thom",
     columns: "3",
-    name: "Mitty\nPrich",
+    name: "Doktor ink'\nThom Penance",
     story:
-      "Från en by utan vind växte Mitty upp med sin slangbella som hon fått av sin far, tätt vid sin sida. För att försörja sin familj blev hon under sin uppväxt en mästare på ficktjuveri samt en skicklig slangbella skytt och kunde skjuta ner burkar från 100 meter. Suget efter större och mer värdefulla stöldgods växte tills ficktjuveri och snattande på den lokala butiken inte längre räckte till. När bankens pengavalv i byn en dag gapade tomt och det enda tecken på inbrott var ett sönderskjutet lås och stenar på brottsplatsen burades Mitty direkt in i byns enda fängelse. Slangbellan beslagtogs och syntes aldrig igen.",
+      "Bluffmakaren Tom var en dag ute på vandring och fann sig själv vid en gammal stuga. Efter en inte så noga undersökning drog han slutsatsen att stugan var övergiven och att det skulle bli hans nya hem. Ett par dagar senare kommer ett bud från hovet som meddelar att drottningen samlar ihop rikets bästa för en elitgrupp och söker husets ägare, Doktor Penance. Tom förstår att han hamnat på fel plats vid fel tillfälle men ser även möjligheten som presenterat sig. Han sträcker fram handen och introducerar sig själv som sitt nya jag - Doktor Ink' Thom Penance.\nPenance må inte vara särskilt bildad inom det område han ska efterlikna men smälta in är en konst han bemästrat sedan barnsben. Införskaffandet av kläder och accessoarer passande en hovläkare var enkelt, svårare skulle det bli när patienter börjar dyka upp på mottagningen. Turen hade dock inte lämnat hans sida. En kväll fann han en särskilt sliten bok, gömd i ett medfaret skåp. Ett gammalt uppslagsverk innehållande recept på märkliga mediciner. Efter en hastig genomläsning tyckte han sig själv kunna området tillräckligt bra för att ta sig an sitt nya uppdrag. Det doktorn inte visste var att boken kom från en mörk plats, vars makter nu tagit ett grepp om bluffmakaren.",
   },
   {
     id: "arden",
@@ -49,11 +49,11 @@ export const stories = [
       "Under dagen ser man henne som en helt vanlig dagmamma som tar hand om några av byns barn. Det som inte lika många vet är att när solen går ner blir hon som en annan person. Hon och hennes man planerar och utför rån av alla möjliga slag. Deras drivkraft i livet är pengar. Det gick hur bra som helst för paret och de hade tillslut en storförmögenhet av allt de snott från resten av byn och grannbyarna. Efter många år där de lever deras bästa liv med massor av pengar blir de påkomna för allt de gjort. Penny Diggins blir tillfångatagen och satt i fängelse men hennes man lyckas fly undan. Nu är hon och hennes nya vänner ute från fängelset och är redo att ge revansch för alla som gjort dem illa.",
   },
   {
-    id: "sadlyn",
+    id: "ping",
     columns: "3",
-    name: "Ms’ Sad\nLynn-Apf",
+    name: "Ms. Ping\nSchie Eldrien",
     story:
-      "Ms Sad Lynn-Apf är uppvuxen på en hästgård i texas där hon redan som barn fick lära sig att ta hand om hästar. Hennes mamma och pappa dog en tidig död och därefter har ingen sett henne le..\nStadens mest efterlysta banditgäng visste att huset nu skulle stå tomt och tog tillfället i akt att använda huset som ett gömställe. Eftersom banditerna dessutom var hästtjuvar var en hästgård ett perfekt gömställe. Detta drog direkt in Belle i kriminaliteten och det visade sig att hon hade riktiga talanger. Belle lurade helt av offren med sin list och lyckades nästan varje gång, hon hade stadens befolkning runt sitt lillfinger. Hon blev snabbt stans främsta brottsling och fick namnet Ms Sad Lynn-Apf. Hon red in i stan på sin svarta häst med sitt långa lasso, och letade efter ett offer att lura denna gång. När invånarna hörde ljudet från en galopperande häst skyndade de sig snabbt in ifall det skulle vara Sad Lynn-Apf som var påväg in i staden. För vem vet vad hennes nästa mål blir.\nNu sitter hon fängslad för sina stölder och bedrägerier, men vem vet när hon lyckas ta sig ut..",
+      "Ms. Ping Schie Eldrien är en vanlig bybo med ett tvistat sinne. En dag kom hon på en plan. Hon skulle låtsas äga ett barnhem i sin hemstad Wittenberg och använda barnen därifrån för att utföra sina egna syften.\nPing började med att kidnappa barn från barnhemmet och manipulera dem till att göra som hon sa. Hon lovade dem godis, leksaker och andra belöningar om de hjälpte henne att ta över staden. Snart hade hon en stor grupp barn under sin kontroll.\nHon började använda barnen för att begå mindre brott och stölder runt om i Wittenberg. Hon instruerade dem att stjäla mat och andra förnödenheter som hon kunde sälja vidare på marknaden. Snart hade hon tjänat tillräckligt med pengar för att köpa mer makt och inflytande och kunde erövra hela Wittenberg.\nNär hovet hörde talas om Ping och hennes metoder, insåg de att de kunde använda henne för att ta över campus i Norrköping. De skickade ut budbärare för att kontakta henne och erbjuda henne en stor summa pengar om hon hjälpte dem i deras planer.\nMs. Ping Schie Eldrien gick med på erbjudandet och började smida planer för hur hon bäst skulle vinna över Nollan till den mörka sidan.",
   },
   {
     id: "loukei",

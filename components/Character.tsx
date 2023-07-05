@@ -35,7 +35,7 @@ const Character = (props: Props) => {
     >
       {/* Set character image with sent id */}
       <div
-        className='relative w-full h-thirdWidth bg-cover bg-center character-shadow ease-linear duration-300
+        className='relative w-full h-thirdWidth bg-cover bg-center character-shadow ease-linear duration-300 object-top aspect-square
         desktop:hover:scale-[1.02] desktop:hover:opacity-75 
         handheld:h-4/6 handheld:character-shadow-mobile'
         style={{

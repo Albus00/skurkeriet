@@ -34,55 +34,12 @@ export default function Page() {
     SetRenderDetails(false);   // Render the details panel
   }
 
-  //#region chatgpt solution
-  // import React, { useState, useEffect } from 'react';
-  // import Image from 'next/image';
-  // import { stories } from '@/data/character_data';
-  // import Character from '@/components/Character';
-  // import Character_details from '@/components/Character_details';
-  // import { useScrollBlock } from '@/hooks/useScrollBlock';
-  // import Socials_image from '@/components/Socials_image';
-  // import Footer from '@/components/Footer';
-
-  // export default function Page() {
-  //   const [blockScroll, allowScroll] = useScrollBlock();
-
-  //   const [characterDetails, setCharacterDetails] = useState({
-  //     id: 'allie',
-  //     name: '[name]',
-  //     story: '[story]',
-  //   });
-  //   const [renderDetails, setRenderDetails] = useState(false);
-
-  //   function openDetails(characterId: string) {
-  //     const character = stories.find((story) => story.id === characterId);
-  //     if (character) {
-  //       setCharacterDetails(character);
-  //     }
-  //     setRenderDetails(true);
-  //     blockScroll();
-  //   }
-
-  //   function closeDetails() {
-  //     allowScroll();
-  //     setRenderDetails(false);
-  //   }
-
-  //   useEffect(() => {
-  //     if (renderDetails) {
-  //       blockScroll();
-  //     } else {
-  //       allowScroll();
-  //     }
-  //   }, [renderDetails]);
-  //#endregion
-
   return (
     <main>
       {/* Group image */}
       {!isMobile ? (
-        <div className='flex flex-col-reverse items-center w-full h-screen bg-cover bg-center bg-group'>
-          <div className='text-whiteText text-center h-2/5'>
+        <div className='flex flex-col-reverse items-center w-full h-screen bg-cover object-bottom bg-center bg-group'>
+          <div className='text-whiteText text-center h-1/3'>
             <h1 className='mb-5'>SKURKERIET</h1>
             <h3>NOLLEP SKA BLI VÅRT</h3>
           </div>
@@ -96,6 +53,7 @@ export default function Page() {
               priority
               unoptimized={true}    // Hidden gem setting
               alt="Skurkeriet"
+              sizes='100vw'
               className='object-cover'
             />
           </div>
