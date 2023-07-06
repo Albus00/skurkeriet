@@ -13,15 +13,17 @@ const Content = (props: Props) => {
     <div>
       {/* History */}
       <div className='text-center m-auto w-1/2 pt-4 pb-36
+        handheld:w-3/5
         mobile:w-4/5'>
         <h2>HISTORIEN OM SKURKERIET</h2>
         <p>
-          Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
-          någonsin skådat. Blixten träffade fängelset som skUrkarna satt i och det brann ned. Ryktet säger att det var
-          skurkarna själva som anlade bran den. Sägen säger att en förbannelse lades över skurkar na den natten. Ingen
-          vet hur de tog sig ur fängelset, men skurkarna överlevde branden och har sedan den natten hållit ihop. De har
-          gått från stad till stad genom århundradena och skapat kaos. De åldras inte, de pratar inte, de fruktas vart
-          de än går. Nu har de ett nytt mål. Nolle-p.
+          Efter 1800-talets urbanisering och utveckling av glödlampan har mörkret stadigt tappat mer och mer makt. Natten var inte längre mörk.
+          200 år senare tar Drottning Regina Zéralth saken i egna händer. Hon har förstått att för att stoppa ljusets utveckling så är det en
+          plats som håller mer vikt än någon annan - Norrköpings Nolle-P. Här sker utvecklingen fortare än på någon annan plats. Detta måste stoppas.
+
+          Drottningen har under flera år planerat för detta tillfälle. Med en noga utvald grupp av rikets bästa vid sin sida ska hon ta Nollan med
+          storm. Mörkret ska härska. Nolle-P ska bli vårt.
+
         </p>
       </div>
 
