@@ -28,7 +28,7 @@ export default function Page() {
               src={"/assar.gif"}
               fill
               className="object-cover rounded-lg"
-              alt="Assar<3"
+              alt="Assar <3"
             />
           </div>
           <input onChange={handleChange} value={password} className="text-black text-2xl pl-2 rounded-md mt-5" type="text" name="password" id="password_input" placeholder="Enter your password" />
