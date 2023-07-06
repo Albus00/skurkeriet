@@ -58,9 +58,9 @@ export const stories = [
   {
     id: "tori",
     columns: "2",
-    name: "Lieutenant\nTori Fick",
+    name: "Madam\nTori Fick",
     story:
-      "Lieutenant Tori Fick är fruktad över många landsgränser. Hennes militära karriär började redan som barn när hon upphittades ensam på ett slagfält av en soldat. Med brist på barnflickor vid frontlinjen fick hon stanna med soldaterna i flera år. Efter det var det ingen idé att sätta henne i ett barnhem. Militären blev hennes värld och hon blev snabbt kunnig inom alla tekniker inom krigsföring. Hon blev satt i träning till soldat i ung ålder och blev snabbt skicklig. Det blev tydligt att ett bråk med Tori skulle leda till sjuksängen i minst en månad.\nFrån soldat till löjtnant har hon fått stort ansvar för hela landets armé. Nu har hon fått en kallelse av drottningen. Kanske kan hennes militära förmåga behövas på nytt håll?"
+      "Känd för att alltid le levde Madam Tori Fick i ett lyckligt äktenskap med Mr Fick. Som ett av landets rikaste adel ordnade de extraordinära och glamorösa bjudningar. Alla ville ha en inbjudan när det blev tal om en bal för att fira deras tionde bröllopsdag.\nDet sägs att Madam Fick varit överförtjust över sin storslagna bal. Alla hennes nära vänner var där för att fira hennes kärleksfulla äktenskap. Hennes familj stod vid hennes sida och hon var högt beundrad av alla gäster. Paret Fick hade bokat en av landets dyraste underhållare dagen till äran. Förtrollad av en uppfinning underhållaren tagit med sig ville stod Mr Fick längst fram av alla gäster för att få se en demonstration. Underhållaren veva igång maskinen men något måste gått snett för att under loppet av någon minut stod halva balsalen i lågor.\nHur Madam Tori Fick kom undan lågorna är fortfarande ett mysterium. Men sedan den kvällen lever hon som änka i ett mörkt hus. Hennes ljuva glädje har förvandlats till ett mörker och hon har aldrig visat sitt leende sedan den dagen.\nRyktet säger att det är Madam Fick som är ansvarig för flera uppeldade uppfinningar runt om i landet som hämnd för att hon förlorat sin make. Men det ända folk sätt är att brevbäraren har levererat ett brev till henne med det kungliga sigillet på."
   },
   {
     id: "gaston",
