@@ -13,7 +13,7 @@ const Content = (props: Props) => {
     <div>
       {/* History */}
       <div className='text-center m-auto w-1/2 pt-4 pb-36
-        handheld:w-4/5'>
+        mobile:w-4/5'>
         <h2>HISTORIEN OM SKURKERIET</h2>
         <p>
           Skurkeriet träffades en natt i fängelset under den värsta stormen som 1800-talets amerikanska vilda västern
@@ -26,9 +26,9 @@ const Content = (props: Props) => {
       </div>
 
       {/* Characters */}
-      <div className='w-full m-auto text-center px-5 pb-10 handheld:px-0'>
-        <h5 className='handheld:hidden'>KLICKA PÅ EN SKURK</h5>
-        <div className='flex flex-wrap w-full handheld:flex-col'>
+      <div className='w-full m-auto text-center px-5 pb-10 mobile:px-0'>
+        <h5 className='mobile:hidden'>KLICKA PÅ EN SKURK</h5>
+        <div className='flex flex-wrap w-full mobile:flex-col'>
           {/* Generate character cards from the stories JSON file */}
           {stories.map((character) => {
             return (
@@ -44,7 +44,7 @@ const Content = (props: Props) => {
         </div>
       </div>
       {/* Game rules */}
-      <div className='m-auto w-3/5 pt-4 pb-36 handheld:w-4/5'>
+      <div className='m-auto w-3/5 pt-4 pb-36 mobile:w-4/5'>
         <h2>SPELREGLER</h2>
         <p>
           Som Nollan vet (eller åtminstone kommer att lära sig), så älskar Phadderister att leka. Skurkeriet vill därför introducera Phadderistspelet.

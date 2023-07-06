@@ -31,7 +31,6 @@ const Character_details = (props: Props) => {
       onClick={handleClick}
     >
       <div className='absolute bottom-0 bg-black h-4/5 w-screen flex top-shadow py-5'>
-
         {/* Image */}
         {!props.isMobile ? (
           <div
@@ -44,7 +43,7 @@ const Character_details = (props: Props) => {
         ) : null}
 
         {/* Story */}
-        <div className='w-2/3 px-10 pt-10 mobile:w-full mobile:overflow-auto mobile:pt-0'>
+        <div className='w-2/3 px-10 pt-10 mobile:w-full mobile:h-full mobile:pt-0 mobile:px-0'>
           {!props.isMobile ? (
             <div className='relative'>
               <h2 className='text-center text-7xl'>{props.name}</h2>
@@ -58,7 +57,7 @@ const Character_details = (props: Props) => {
               />
             </div>
           ) : (
-            <div className='relative mb-5'>
+            <div className='mb-5 relative'>
               <Image
                 width={40}
                 height={40}
@@ -69,10 +68,12 @@ const Character_details = (props: Props) => {
               />
             </div>
           )}
-          {splitStory}
+          <div className="mobile:h-full mobile:overflow-scroll mobile:px-10 mobile:pb-10">
+            {splitStory}
+          </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

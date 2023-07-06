@@ -17,6 +17,7 @@ const Character = (props: Props) => {
   const imageSrc = "/images/characters/" + props.id + ".jpg";
 
   const isMobile = useMediaQuery('(max-width: 1024px)')
+  const isLaptop = useMediaQuery('(max-width: 1400px)')
 
   function handleClick(type: string) {
     // Dont trigger the div OnClick when on mobile. Should only work when pressing the button on mobile
@@ -29,15 +30,15 @@ const Character = (props: Props) => {
   return (
     <div
       className={
-        "relative px-2 mb-32 hover:cursor-pointer " + (props.columns == "2" ? 'w-1/2' : 'w-1/3') +
-        " handheld:w-full handheld:px-0 handheld:mb-0 handheld:h-screen"}
+        "relative mb-32 hover:cursor-pointer " + (isLaptop || props.columns == "2" ? 'w-1/2' : 'w-1/3') + ((!isLaptop && props.columns == "2") ? ' px-[8.25vw]' : ' px-2') +
+        " mobile:w-full mobile:px-0 mobile:mb-0 mobile:h-screen"}
       onClick={() => { handleClick("area") }}           // Change the character details in the sliding box on the home page
     >
       {/* Set character image with sent id */}
       <div
-        className='relative w-full h-thirdWidth bg-cover bg-center character-shadow ease-linear duration-300 object-top aspect-square
+        className='relative w-full bg-cover bg-center character-shadow ease-linear duration-300 aspect-square
         desktop:hover:scale-[1.02] desktop:hover:opacity-75 
-        handheld:h-4/6 handheld:character-shadow-mobile'
+        mobile:h-4/6 mobile:character-shadow-mobile'
         style={{
           backgroundImage: "url(" + imageSrc + ")", // Set character image as background
         }}
