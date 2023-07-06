@@ -43,7 +43,7 @@ const Character_details = (props: Props) => {
         ) : null}
 
         {/* Story */}
-        <div className='w-2/3 px-10 pt-10 mobile:w-full mobile:h-full mobile:pt-0 mobile:px-0'>
+        <div className='w-2/3 px-10 pt-10 handheld:w-full handheld:px-24 mobile:h-full mobile:pt-0 mobile:px-0'>
           {!props.isMobile ? (
             <div className='relative'>
               <h2 className='text-center text-7xl'>{props.name}</h2>

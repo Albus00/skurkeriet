@@ -16,7 +16,7 @@ const Character = (props: Props) => {
   const splitName = name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
   const imageSrc = "/images/characters/" + props.id + ".jpg";
 
-  const isMobile = useMediaQuery('(max-width: 1024px)')
+  const isMobile = useMediaQuery('(max-width: 750px)')
   const isLaptop = useMediaQuery('(max-width: 1400px)')
 
   function handleClick(type: string) {
