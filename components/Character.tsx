@@ -29,6 +29,7 @@ const Character = (props: Props) => {
 
   return (
     <div
+      // Handles the grid of characters for different devices
       className={
         "relative mb-32 hover:cursor-pointer " + (isLaptop || props.columns == "2" ? 'w-1/2' : 'w-1/3') + ((!isLaptop && props.columns == "2") ? ' px-[8.25vw]' : ' px-2') +
         " mobile:w-full mobile:px-0 mobile:mb-0 mobile:h-screen"}
