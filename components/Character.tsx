@@ -13,8 +13,8 @@ type Props = {
 const Character = (props: Props) => {
   // Convert linebreak in json to linebreak in the HTML by splitting in into multiple <p> elements
   const name = props.name;
-  const splitName = name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
   const imageSrc = "/images/characters/" + props.id + ".jpg";
+  const splitName = name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
 
   const isMobile = useMediaQuery('(max-width: 750px)')
   const isLaptop = useMediaQuery('(max-width: 1400px)')

@@ -65,7 +65,7 @@ export const stories = [
   {
     id: "gaston",
     columns: "2",
-    name: "Gastón T. Rial",
+    name: "Gastón\nT. Rial",
     story:
       "Gastón T. Rial är en mäktig affärsman som är ökänd för sina mörka affärer. På häst och vagn ses han omkringresande i riket, alltid i färd med att kontrollera sina över riket spridda tillgångar och att utveckla sitt nätverk av kontakter.\nMed sitt skarpa intellekt och sin förmåga att snabbt anpassa sig till förändringar hade Gastón T. Rial byggt upp en imponerande förmögenhet och etablerat sig som en av de mest framgångsrika affärsmännen i landet. Även drottningen hade uppmärksammat hans framgångar. Men han hade också ett mörkt förflutet och rykten om hans inblandning i illegala aktiviteter och organiserad brottslighet var vida spridda. Till slut sattes han dit av statliga myndigheter och ställdes inför rätta. Mitt i rättegången stormade drottningen in och benådade honom. Hon hade andra planer för Gastón T. Rial.",
   },

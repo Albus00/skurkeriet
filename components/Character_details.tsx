@@ -15,6 +15,7 @@ type Props = {
 const Character_details = (props: Props) => {
   let imageSrc = "/images/characters/" + props.id + ".jpg";
   const splitStory = props.story.split('\n').map(str => <p className="mb-4" key={str}>{str}</p>); // Split the story into multiple paragraphs wherever \n is used
+  const splitName = props.name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
 
   const handleClick = (event: any) => {
     // Makes sure the onclick function (this) is only called when clicking the parent element (above the details panel). (works on X button)
@@ -63,9 +64,10 @@ const Character_details = (props: Props) => {
                 height={40}
                 src={arrowIcon}
                 alt="Stäng"
-                className="m-auto"
+                className="m-auto mb-8"
                 onClick={handleClick}
               />
+              <h2 className='text-center text-7xl mobile:text-4xl'>{splitName}</h2>
             </div>
           )}
           <div className="mobile:h-full mobile:overflow-scroll mobile:px-10 mobile:pb-10">
