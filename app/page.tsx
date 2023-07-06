@@ -22,8 +22,8 @@ export default function Page() {
       <div className="w-[28rem] h-[40rem] self-center bg-gray-700 rounded-3xl pt-12 handheld:w-3/4 handheld:h-5/6 justify-center">
         <h2 className="text-red-600">&#91;TOP SECRET&#93;</h2>
         <h2 className="leading-3">For MAs eyes only</h2>
-        <div className="font-modesto tracking-[0.2em] flex flex-col px-16">
-          <div className="relative w-[250px] h-[250px] m-auto my-5">
+        <div className="font-modesto tracking-[0.2em] flex flex-col px-16 mobile:px-6">
+          <div className="relative w-[250px] h-[250px] m-auto my-5 mobile:w-[180px] mobile:h-[180px]">
             <Image
               src={"/assar.gif"}
               fill
@@ -32,7 +32,7 @@ export default function Page() {
             />
           </div>
           <input onChange={handleChange} value={password} className="text-black text-2xl pl-2 rounded-md mt-5" type="text" name="password" id="password_input" placeholder="Enter your password" />
-          <button onClick={handleClick} className="text-2xl text-black bg-yellow rounded-xl px-12 py-3 m-auto w-1/2 mt-5 font-bold tracking-widest">LOGIN</button>
+          <button onClick={handleClick} className="text-2xl text-black bg-yellow rounded-xl px-12 py-3 m-auto w-1/2 mt-5 font-bold tracking-widest mobile:px-2">LOGIN</button>
         </div>
       </div>
     </div>
