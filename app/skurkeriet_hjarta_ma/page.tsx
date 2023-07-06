@@ -45,7 +45,7 @@ export default function Page() {
           </div>
         </div>
       ) : (
-        <div className='h-screen'>
+        <div className='h-screen max-h-screen overflow-hidden'>
           <div className='relative w-full aspect-square'>
             <Image
               src={'/images/group-mobile.jpg'}
