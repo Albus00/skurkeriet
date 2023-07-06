@@ -15,7 +15,12 @@ type Props = {
 const Character_details = (props: Props) => {
   let imageSrc = "/images/characters/" + props.id + ".jpg";
   const splitStory = props.story.split('\n').map(str => <p className="mb-4" key={str}>{str}</p>); // Split the story into multiple paragraphs wherever \n is used
-  const splitName = props.name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
+
+  // Change text size on mobile so it fits
+  let splitName = props.name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
+  if (props.name.includes("Tayla")) {
+    splitName = props.name.split('\n').map(str => <h4 className='self-center mobile:text-4xl' key={str}>{str}</h4>);
+  }
 
   const handleClick = (event: any) => {
     // Makes sure the onclick function (this) is only called when clicking the parent element (above the details panel). (works on X button)
