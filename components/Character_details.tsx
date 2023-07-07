@@ -79,7 +79,7 @@ const Character_details = (props: Props) => {
               <div className='text-center text-7xl mobile:text-4xl'>{splitName}</div>
             </div>
           )}
-          <div ref={divRef} className="mobile:h-4/5 mobile:overflow-scroll mobile:px-10 mobile:pb-16">
+          <div ref={divRef} className="mobile:h-4/5 mobile:overflow-scroll mobile:px-10 mobile:pb-10">
             {splitStory}
           </div>
         </div>
