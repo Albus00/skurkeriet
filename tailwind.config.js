@@ -11,11 +11,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // 'industry': 'Industry Inc Base',
         'modesto': 'modesto-condensed',
         'indivisible': 'indivisible, sans-serif',
-        'vinyl': 'Rubik Vinyl',
-        'cascadia': 'Cascadia'
+        'vinyl': ['var(--font-vinyl)'],
+        'cascadia': ['var(--font-cascadia)']
       },
       colors: {
         black: '#030302',
