@@ -2,6 +2,7 @@
 import Image from "next/image";
 import closeIcon from "icons/close.svg"
 import arrowIcon from "icons/arrow.svg"
+import { useRef } from "react";
 
 type Props = {
   condition: boolean
@@ -13,11 +14,12 @@ type Props = {
 }
 
 const Character_details = (props: Props) => {
+  const divRef = useRef<HTMLInputElement>(null);
   let imageSrc = "/images/characters/" + props.id + ".jpg";
   const splitStory = props.story.split('\n').map(str => <p className="mb-4" key={str}>{str}</p>); // Split the story into multiple paragraphs wherever \n is used
 
   // Change text size on mobile so it fits
-  let splitName = props.name.split('\n').map(str => <h4 className='self-center' key={str}>{str}</h4>);
+  let splitName = props.name.split('\n').map(str => <h4 className='self-center mobile:text-4xl' key={str}>{str}</h4>);
   if (props.name.includes("Tayla")) {
     splitName = props.name.split('\n').map(str => <h4 className='self-center mobile:text-4xl' key={str}>{str}</h4>);
   }
@@ -28,7 +30,9 @@ const Character_details = (props: Props) => {
       return;
     }
 
-    props.SetCondition(); // Send to parent (index.tsx) that the details panel should be closed
+    props.SetCondition();                                     // Send to parent (index.tsx) that the details panel should be closed
+    // Since the details page is the same component for every character (it just switches out the content) we have to scroll to the top when closing it. Inline if is used so it's not NULL
+    divRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   return (
@@ -72,10 +76,10 @@ const Character_details = (props: Props) => {
                 className="m-auto mb-8"
                 onClick={handleClick}
               />
-              <h2 className='text-center text-7xl mobile:text-4xl'>{splitName}</h2>
+              <div className='text-center text-7xl mobile:text-4xl'>{splitName}</div>
             </div>
           )}
-          <div className="mobile:h-full mobile:overflow-scroll mobile:px-10 mobile:pb-10">
+          <div ref={divRef} className="mobile:h-4/5 mobile:overflow-scroll mobile:px-10 mobile:pb-16">
             {splitStory}
           </div>
         </div>
