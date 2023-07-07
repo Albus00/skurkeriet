@@ -112,13 +112,15 @@ const Content = (props: Props) => {
           <br />
           P.S also good at parties.
         </p>
-        <Image
-          src="/images/tengil.png"
-          alt="All makt åt Tengil"
-          width="700"
-          height="200"
-          className='mt-10'
-        />
+        <a href="http://www.mera.se">
+          <Image
+            src="/images/tengil.jpg"
+            alt="All makt åt Tengil"
+            width="700"
+            height="200"
+            className='mt-10'
+          />
+        </a>
       </div>
 
       {/* Sponsors */}

@@ -33,7 +33,7 @@ const Character_details = (props: Props) => {
 
   return (
     <div  // Parent div covering the entire screen. Makes is able to click above the details box to close it.
-      className={`fixed transition-all duration-500 h-screen w-screen ${props.condition ? "bottom-0" : "-bottom-full"}`}  // makes the dig slide upp and down
+      className={`fixed transition-all duration-500 h-full w-full ${props.condition ? "bottom-0" : "-bottom-full"}`}  // makes the dig slide upp and down
       onClick={handleClick}
     >
       <div className='absolute bottom-0 bg-black h-4/5 w-screen flex top-shadow py-5'>
