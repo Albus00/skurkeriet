@@ -4,22 +4,29 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 type Props = {
-  company: string
+  company1: string
+  company2: string
   className: string
-  random: boolean
 }
 
 const Sponsor = (props: Props) => {
-  // Randomize the visibility for the sponsor logo that has only paid for the "slumpad" tier
   // Because random numbers are used the client- and serverside will not match, so the number has to be placed in state and effect
-  const [logoVisibility, setLogoVisibility] = useState(true);
+  const [useCompany2, setUseCompany2] = useState(true);
   useEffect(() => {
-    setLogoVisibility(Math.random() < 0.5);
+    setUseCompany2(Math.random() < 0.5);
   }, []);
 
-  const img_src = "/images/sponsors/" + props.company.toLowerCase() + ".png";
+  let company = props.company1;
 
-  return !props.random || logoVisibility ? (  // Only render image if the prop is not randomized or randomized to be visible
+  // If company2 is used (not blank), the component should randomize visibility between company1 and company2 (set earlier because react hook need to be outside if-statements)
+  if (props.company2 != "" && useCompany2) {
+    company = props.company2;
+  }
+
+
+  const img_src = "/images/sponsors/" + company.toLowerCase() + ".png";
+
+  return (
     <div className={
       props.className +
       " relative" +
@@ -28,13 +35,13 @@ const Sponsor = (props: Props) => {
       <Image
         src={img_src}
         fill
-        alt={props.company}
+        alt={company}
         sizes="50vw"
         className="
           object-contain
         " />
     </div>
-  ) : null
+  )
 }
 
 export default Sponsor
