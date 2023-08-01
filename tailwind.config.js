@@ -20,6 +20,7 @@ module.exports = {
         black: '#030302',
         yellow: '#F9EA38',
         grey: '#2F2F2F',
+        cardGrey: '#9c9c9c',
         whiteText: '#E3E3E3'
       },
       backgroundImage: {

@@ -3,6 +3,7 @@ import Character from '@/components/Character';
 import Socials_image from '@/components/Socials_image';
 import { stories } from '@/data/character_data'
 import Sponsor from '@/components/Sponsor';
+import Card_passwords from '@/components/Card_passwords';
 
 type Props = {
   openDetails: Function
@@ -83,6 +84,12 @@ const Content = (props: Props) => {
           height="500"
           className='mt-6'
         />
+      </div>
+
+      {/* Card password */}
+      <div className='text-center m-auto w-2/3 mobile:w-5/6 pt-4 pb-64'>
+        <h2>HAR NOLLAN HITTAT ETT LÖSENORD?</h2>
+        <Card_passwords />
       </div>
 
       {/* Social medias */}

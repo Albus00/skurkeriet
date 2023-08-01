@@ -2,7 +2,7 @@ export const stories = [
   {
     id: "regina",
     columns: "3",
-    name: "Regina\nZéralth ",
+    name: "Regina\nZéralth",
     story:
       "Drottning Regina Zéralth hade alltid längtat efter makt och kontroll. Redan som ung flicka insåg hon att hon hade en gåva - en skarp intelligens och förmåga att manipulera människorna runt omkring sig. Hon använde dessa egenskaper till sin fördel och steg snabbt i rang i kungahuset. När hon till slut blev drottning, var hon redan en maktgalen och manipulativ ledare.\nHon insåg tidigt att ljusets utveckling hotade hennes makt och såg Norrköpings Nolle-P som den perfekta platsen att sätta stopp för det. Hon började planera i hemlighet och samlade en grupp av rikets mest intelligenta och lojala personer, som hon visste skulle följa henne till slutet.\nDrottning Regina Zéralth var beredd att göra allt som krävdes för att ta över Nolle-P och återupprätta mörkrets makt. Hennes manipulation och listighet skulle visa sig vara avgörande i kampen mot ljuset.",
   },
