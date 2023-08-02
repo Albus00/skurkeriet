@@ -13,7 +13,6 @@ const Card_passwords = () => {
   // Import the scroll block functions
   const [blockScroll, allowScroll] = useScrollBlock();
 
-
   // Call the submit function when pressing enter on keyboard
   useEffect(() => {
     const listener = (event: { code: string; preventDefault: () => void; }) => {
