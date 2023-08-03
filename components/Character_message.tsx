@@ -1,6 +1,7 @@
 import Image from "next/image";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import closeIcon from "icons/close.svg"
+import Glitch from 'react-glitch-text'
 
 type Props = {
   name: string
