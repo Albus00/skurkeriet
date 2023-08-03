@@ -15,7 +15,7 @@ export const messages = [
     name: "Doktor ink'\nThom Penance",
     password: "bowTiesAreCool",
     message:
-      "Thom. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "",
   },
   {
     name: "Joe-Lou\nS. Vagster",
