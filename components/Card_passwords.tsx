@@ -78,7 +78,7 @@ const Card_passwords = () => {
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .pauseFor(3000)
+                  .pauseFor(2000)
                   .typeString("Hej Nollan")
                   .pauseFor(100)
                   .typeString("...")
@@ -135,6 +135,12 @@ const Card_passwords = () => {
                 .typeString(" Penance")
                 .pauseFor(4000)
                 .deleteAll()
+                .changeDelay(0.04)
+                .typeString("(Skurkeriet sparar eller behandlar inte Nollans namn eller uppgifter i någon utsträckning.)")
+                .pauseFor(1000)
+                .changeDeleteSpeed(1)
+                .deleteAll()
+                .changeDelay("natural")
                 .typeString("Testa skriva in det nedan, om Nollan vågar...")
                 .start()
             }}
