@@ -173,7 +173,9 @@ const Card_passwords = () => {
         className="text-2xl font-modesto text-black bg-yellow rounded-xl px-12 py-1 m-auto mt-5 font-bold tracking-widest ease-linear duration-300 
         hover:cursor-pointer hover:shadow-xl hover:scale-105 hover:opacity-80 
         mobile:px-2 mobile:w-1/2">
-        SKICKA
+        {
+          password == "IWHBYD" ? (<span>&#128264;</span>) : ("SKICKA")
+        }
       </button>
 
       {
