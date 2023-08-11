@@ -72,7 +72,8 @@ body {
   background-clip: content-box;
   padding: 4px;
 }
-@responsive {
+/* Makes the classes work with responsive web, for example "mobile:character-shadow-mobile" */
+@layer utilities {  
   .character-shadow-mobile {
     -moz-box-shadow: inset 0 0 10px 15px #030302;
     -webkit-box-shadow: inset 0 0 10px 15px #030302;

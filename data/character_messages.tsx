@@ -3,13 +3,13 @@ export const messages = [
     name: "Regina\nZéralth",
     password: "jagskavatyst",
     message:
-      "Regina. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "https://youtu.be/dQw4w9WgXcQ",
   },
   {
     name: "Lord Kurt\nO’Silas-McGee",
     password: "URAQTPI",
     message:
-      "Kurt. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "tihihihi, thx.",
   },
   {
     name: "Doktor ink'\nThom Penance",
@@ -21,49 +21,48 @@ export const messages = [
     name: "Joe-Lou\nS. Vagster",
     password: "daiminator2000400",
     message:
-      "Joe-Lou. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "B-)",
   },
   {
     name: "Tayla Schans",
     password: "OMGit’sdaimonds!",
     message:
-      "Tayla. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "Låter som kastrullskrammel",
   },
   {
     name: "Asher Sir Weiss",
     password: "IWHBYD",
     message:
-      "Asher. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "iwhbyd.mp3",
   },
   {
     name: "Tiff\nHeather",
     password: "sickntiredofthephotoshop",
     message:
-      "Tiff. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "Ibland måste man göra saker man inte vågar, annars är man ingen människa utan bara en liten lort.",
   },
   {
     name: "Count D \nBenjamins",
     password: "tvåkronorsspons",
     message:
-      "Count. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "Två kronor är mer än en.",
   },
   {
     name: "Ms. Ping\nSchie Eldrien",
     password: "dragon4life",
     message:
-      "Ping. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "minion.gif",
   },
   {
     name: "Madam\nTori Fick",
     password: "SarrowsSarrows",
     message:
-      "Tori. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
+      "Beast",
   },
   {
     name: "Gastón\nT. Rial",
     password: "youtu.be/qm3vCvNGQZI",
     message:
-      "Gaston. Suspendisse cursus tempor scelerisque. Donec vulputate diam dui, non lobortis risus porttitor a. Curabitur laoreet lorem dolor, eu varius sapien aliquet sit amet. Pellentesque quis augue lectus. Aliquam mollis arcu vitae erat tincidunt semper. Vivamus rhoncus sem in aliquet euismod. Maecenas risus orci, iaculis ac congue sit amet, malesuada at libero. Sed ornare euismod tincidunt. Integer eget dui nibh.",
-  },
-
+      "Check? Check.",
+  }
 ]

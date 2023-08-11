@@ -10,6 +10,12 @@ type Props = {
 
 const Character_message = (props: Props) => {
   let splitName = props.name.split('\n').map(str => <h4 className='self-center mobile:text-4xl' key={str}>{str}</h4>);
+  let isImage = false;
+
+  // Check if character message contains a gif, if so show the image
+  if (props.message.includes('.gif')) {
+    isImage = true;
+  }
 
   const handleClick = (event: any) => {
     // Makes sure the onclick function (this) is only called when clicking the parent element (above the details panel). (works on X button)
@@ -41,10 +47,21 @@ const Character_message = (props: Props) => {
             />
           </div>
           <div className="px-16 mobile:px-3">
-            <p>{props.message}</p>
+            {!isImage ? (
+              <p>{props.message}</p>
+            ) : (
+              <div className="relative w-full aspect-square m-auto p-5">
+                <Image
+                  src={"/images/" + props.message}
+                  fill
+                  className="object-cover rounded-lg"
+                  alt="gif"
+                />
+              </div>
+            )}
           </div>
         </div>
-      </div >
+      </div>
     ) : (
       <div className='fixed bottom-0 right-0 bg-[#1f1f1f] h-full w-full top-shadow p-5'>
         <div className='relative w-full'>
@@ -59,7 +76,18 @@ const Character_message = (props: Props) => {
           <h2 className='text-center text-5xl pt-8'>{props.name}</h2>
         </div>
         <div className="px-16 mobile:px-3">
-          <p>{props.message}</p>
+          {!isImage ? (
+            <p>{props.message}</p>
+          ) : (
+            <div className="relative w-full aspect-square m-auto p-5">
+              <Image
+                src={"/images/" + props.message}
+                fill
+                className="object-cover rounded-lg"
+                alt="gif"
+              />
+            </div>
+          )}
         </div>
       </div>
     )

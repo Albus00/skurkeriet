@@ -38,7 +38,7 @@ export default function Page() {
     <main>
       {/* Group image */}
       {!isMobile ? (
-        <div className='flex flex-col-reverse items-center w-full h-screen bg-cover object-bottom bg-center bg-group'>
+        <div className='flex flex-col-reverse items-center w-full h-screen bg-cover object-bottom bg-bottom bg-group'>
           <div className='text-whiteText text-center h-1/3'>
             <h1 className='mb-5'>SKURKERIET</h1>
             <h3>NOLLEP SKA BLI VÅRT</h3>

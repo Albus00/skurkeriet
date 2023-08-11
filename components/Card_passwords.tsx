@@ -62,7 +62,22 @@ const Card_passwords = () => {
       SetCharacter(characterSearch);
     }
 
-    blockScroll();            // Block the user from scrolling the background when character details is open
+
+    // Check if message contains a sound file
+    if (characterSearch.message.includes(".mp3")) {
+      // Play the audio file
+      let audio = new Audio("audio/" + characterSearch.message)
+      audio.play();
+      closeMessage();   // Don't open the message popup
+    }
+    // Check if message contains a url file
+    else if (characterSearch.message.includes("https://")) {
+      window.open(characterSearch.message, '_blank', 'noreferrer'); // Open the url in another tab
+      closeMessage();  // Don't open the message popup
+    }
+    else
+      blockScroll();            // Block the user from scrolling the background when character details is open
+
   }
 
   async function closeMessage() {
@@ -103,25 +118,27 @@ const Card_passwords = () => {
                 .typeString("...")
                 .pauseFor(1000)
                 .deleteAll()
-                .pauseFor(1000)
-                .typeString("Nollan bör vara vaksam på vem de ger sitt namn till")
-                .pauseFor(1000)
-                .typeString(".....")
+                .pauseFor(2000)
+                .typeString("Hej...")
+                .pauseFor(500)
+                .typeString(" " + answer + ".")
                 .pauseFor(1000)
                 .deleteAll()
+                .pauseFor(1000)
+                .typeString("Skurkeriet uppskattar Nollans visade intresse.")
                 .pauseFor(2000)
-                .typeString("Skurkeriet tackar för Nollans bidrag")
-                .pauseFor(500)
-                .typeString(" och kommer höra av sig")
-                .pauseFor(100)
-                .typeString(".")
-                .pauseFor(100)
-                .typeString(".")
-                .pauseFor(100)
-                .typeString(".")
-                .pauseFor(500)
-                .typeString(" " + answer)
+                .deleteAll()
+                .typeString("Denna hemsida sparar inga uppgifter Nollan skriver in")
+                .pauseFor(1000)
+                .typeString(" men")
                 .pauseFor(2000)
+                .typeString(" som Nollan vet så ser Skurkeriet allt.")
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString("Så vi ses,")
+                .pauseFor(1000)
+                .typeString(" Nollan.")
+                .pauseFor(1500)
                 .deleteAll()
                 .typeString("Mörka hälsningar")
                 .pauseFor(500)
@@ -135,13 +152,7 @@ const Card_passwords = () => {
                 .typeString(" Penance")
                 .pauseFor(4000)
                 .deleteAll()
-                .changeDelay(0.04)
-                .typeString("(Skurkeriet sparar eller behandlar inte Nollans namn eller uppgifter i någon utsträckning.)")
-                .pauseFor(1000)
-                .changeDeleteSpeed(1)
-                .deleteAll()
-                .changeDelay("natural")
-                .typeString("Testa skriva in det nedan, om Nollan vågar...")
+                .typeString("Testa skriva in ett nytt lösenord...")
                 .start()
             }}
           />
