@@ -1,8 +1,9 @@
+@import url("https://p.typekit.net/p.css?s=1&k=nnh8xid&ht=tk&f=15557.27841.48821.48823.48827&a=89276843&app=typekit&e=css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://p.typekit.net/p.css?s=1&k=nnh8xid&ht=tk&f=15557.27841.48821.48823.48827&a=89276843&app=typekit&e=css");
 
 @layer base {
   h1 {
