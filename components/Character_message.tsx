@@ -55,6 +55,7 @@ const Character_message = (props: Props) => {
                   src={"/images/" + props.message}
                   fill
                   className="object-cover rounded-lg"
+                  unoptimized={true}
                   alt="gif"
                 />
               </div>
