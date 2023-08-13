@@ -14,7 +14,7 @@ export default function Page() {
   // Import the scroll block functions
   const [blockScroll, allowScroll] = useScrollBlock();
 
-  const [characterDetails, SetCharacterDetails] = useState({ id: 'allie', name: '[name]', story: '[story]' })   // Set character details placeholder
+  const [characterDetails, SetCharacterDetails] = useState({ id: 'regina', name: '[name]', story: '[story]' })   // Set character details placeholder
   const [renderDetails, SetRenderDetails] = useState(false);                                                    // Decides whether the character details box should be rendered
 
   // Called when clicking on a character

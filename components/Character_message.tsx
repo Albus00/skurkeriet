@@ -36,7 +36,7 @@ const Character_message = (props: Props) => {
       >
         <div className='bg-[#1f1f1f] h-4/5 w-1/3 top-shadow p-5 rounded-3xl handheld:w-full handheld:mx-16 mobile:mx-3'>
           <div className='relative w-full'>
-            <h2 className='text-center text-5xl mt-5'>{props.name}</h2>
+            <h2 className='text-center text-5xl mt-5'>{splitName}</h2>
             <Image
               width={25}
               height={25}
@@ -73,7 +73,7 @@ const Character_message = (props: Props) => {
             className="absolute right-0 top-0 hover:cursor-pointer"
             onClick={handleClick}
           />
-          <h2 className='text-center text-5xl pt-8'>{props.name}</h2>
+          <h2 className='text-center text-5xl pt-8'>{splitName}</h2>
         </div>
         <div className="px-16 mobile:px-3">
           {!isImage ? (

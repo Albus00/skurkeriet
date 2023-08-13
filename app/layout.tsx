@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 import Footer from '@/components/Footer'
-import './style/globals.css'
 import './style/fonts.css'
+import './style/globals.css'
 
 export const metadata = {
   title: 'Skurkeriet',
