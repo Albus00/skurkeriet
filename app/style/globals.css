@@ -35,6 +35,12 @@
     text-align: justify;
   }
 
+  @media (max-width: 750px) {
+    p {
+      text-align: left;
+    }
+  }
+
   a {
     color: inherit;
     text-decoration: none;

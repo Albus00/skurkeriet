@@ -166,7 +166,7 @@ const Card_passwords = () => {
         onChange={handleChange}
         value={password}
         className="bg-[#484848] text-whiteText text-xl w-2/6 px-5 py-3 rounded-xl mt-5 focus:outline-none invalid:bg-inherit handheld:w-2/3 mobile:w-5/6"
-        type="text" name="password" id="password_input"
+        type="text" name="password" id="password_input" autoCorrect="off" autoCapitalize="off"
         placeholder="Lösenord" /><br />
       <button
         onClick={handleClick}

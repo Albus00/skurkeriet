@@ -19,11 +19,11 @@ const Content = (props: Props) => {
         <h2>HISTORIEN OM SKURKERIET</h2>
         <p>
           Efter 1800-talets urbanisering och utveckling av glödlampan har mörkret stadigt tappat mer och mer makt. Natten var inte längre mörk.
-          200 år senare tar Drottning Regina Zéralth saken i egna händer. Hon har förstått att för att stoppa ljusets utveckling så är det en
-          plats som håller mer vikt än någon annan - Norrköpings Nolle-P. Här sker utvecklingen fortare än på någon annan plats. Detta måste stoppas.
-
-          Drottningen har under flera år planerat för detta tillfälle. Med en noga utvald grupp av rikets bästa vid sin sida ska hon ta Nollan med
-          storm. Mörkret ska härska. Nolle-P ska bli vårt.
+          Drottning Regina Zéralth tar saken i egna händer. Hon har förstått att för att stoppa ljusets utveckling så är det en
+          plats som håller mer vikt än någon annan - Norrköpings Nolle-P. Här sker utvecklingen fortare än på någon annan plats.<br />
+          <br />
+          I mer än två århundraden har drottningen planerat för detta tillfälle. Regina Zéralth har samlat en grupp av rikets mörkaste själar
+          för att ta nollan med storm. Skurkeriet ska ta över Nolle-P och låta mörkret härska.
 
         </p>
       </div>
@@ -95,7 +95,7 @@ const Content = (props: Props) => {
       {/* Social medias */}
       <div className='text-center m-auto w-2/3 pt-4 pb-64'>
         <h2>SOCIALA MEDIER</h2>
-        <p className='text-center'>
+        <p className='text-center mobile:text-left'>
           psst...<br />
           <br />
           Enligt rykten kan det vara bra att Nollan har en god sikt <br />
@@ -110,7 +110,7 @@ const Content = (props: Props) => {
       {/* Tengil */}
       <div className='text-center m-auto w-1/3 pt-4 pb-36 handheld:w-4/5'>
         <h2 className='font-vinyl'>ALL MAKT ÅT TENGIL</h2>
-        <p>
+        <p className='text-justify'>
           All makt åt Tengil, vår Befriare. Vid tidens begynnelse, strax innan Big Bang, steg ett mäktigt väsen fram ur skuggorna. Det som givit styrka
           och hopp åt Skurkarna. Detta väsen, Tengil, tog formen av en ståtlig maniken för att nå er alldagliga! Tengil höjer Skurkeriets omoral och
           beskyddar dess handlingar. Han höljer Skurkarnas själar i skuggor och fyller deras hjärtan med ofog. Skurkeriet bär med sig Tengils avatar
