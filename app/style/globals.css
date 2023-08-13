@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://p.typekit.net/p.css?s=1&k=nnh8xid&ht=tk&f=15557.27841.48821.48823.48827&a=89276843&app=typekit&e=css");
+
 @layer base {
   h1 {
     @apply font-modesto font-bold text-8xl leading-none tracking-[0.3em] text-center
