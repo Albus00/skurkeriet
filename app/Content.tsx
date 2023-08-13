@@ -64,7 +64,7 @@ const Content = (props: Props) => {
         <p>
           Varje Nollan tar sina tre kort och studerar dem. Phadderistspelet handlar om såväl tur som skicklighet. Försök lägga kortens färdighetspoäng
           på minnet. Vänd sedan på korten så att avigsidan hamnar uppåt och blanda. Framför vardera Nollan ligger nu en hög med tre kort i okänd ordning.
-          Utse vem av Nollan som ska börja – Spelare 1.
+          Utse vem av Nollan som ska börja - Spelare 1.
           <br />
           Spelare I bestämmer vilken av de tre färdigheterna 1, 2 eller 3 som ska spelas ut först. På given signal vänder båda Nollan upp sitt översta
           kort i högen. Nollan med högst färdighetspoäng på den valda färdigheten 1,2 eller 3 vinner omgången. Nu är det spelare II:s tur att bestämma
