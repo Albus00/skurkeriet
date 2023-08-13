@@ -1,40 +1,77 @@
-'use client'
+"use client"
 
-// Login Page for preview
-import Image from "next/image"
-import { useRouter } from 'next/navigation'
-import { useState } from "react";
+import { useState } from 'react';
+import Image from 'next/image';
+import { stories } from '@/data/character_data'
+import { useScrollBlock } from '@/hooks/useScrollBlock';
+import useMediaQuery from '@/hooks/useMediaQuery'
+import Character_details from '@/components/Character_details';
+import Content from './Content';
 
 export default function Page() {
-  const router = useRouter();
-  const [password, setPassword] = useState('');
+  const isMobile = useMediaQuery('(max-width: 1024px)')
 
-  const handleChange = (event: any) => {
-    setPassword(event.target.value);
-  };
+  // Import the scroll block functions
+  const [blockScroll, allowScroll] = useScrollBlock();
 
-  function handleClick() {
-    router.push('/' + password);
+  const [characterDetails, SetCharacterDetails] = useState({ id: 'allie', name: '[name]', story: '[story]' })   // Set character details placeholder
+  const [renderDetails, SetRenderDetails] = useState(false);                                                    // Decides whether the character details box should be rendered
+
+  // Called when clicking on a character
+  function openDetails(characterId: string) {
+    // Get character details from json file
+    let character = stories.find(stories => stories.id === characterId);
+    if (character) { // Check that character is defined
+      SetCharacterDetails(character); // Set the character details with useState
+    }
+
+    SetRenderDetails(true);   // Render the details panel
+    blockScroll();            // Block the user from scrolling the background when character details is open
+  }
+
+  async function closeDetails() {
+    allowScroll();            // Allow scrolling when closing the details panel
+    SetRenderDetails(false);   // Render the details panel
   }
 
   return (
-    <div className="flex w-screen h-screen justify-center">
-      <div className="w-[28rem] h-[40rem] self-center bg-gray-700 rounded-3xl pt-12 handheld:w-3/4 handheld:h-5/6 justify-center">
-        <h2 className="text-red-600">&#91;TOP SECRET&#93;</h2>
-        <h2 className="leading-3">For MAs eyes only</h2>
-        <div className="font-modesto tracking-[0.2em] flex flex-col px-16 mobile:px-6">
-          <div className="relative w-[250px] h-[250px] m-auto my-5 mobile:w-[180px] mobile:h-[180px]">
+    <main>
+      {/* Group image */}
+      {!isMobile ? (
+        <div className='flex flex-col-reverse items-center w-full h-screen bg-cover object-bottom bg-bottom bg-group'>
+          <div className='text-whiteText text-center h-1/3'>
+            <h1 className='mb-5'>SKURKERIET</h1>
+            <h3>NOLLEP SKA BLI VÅRT</h3>
+          </div>
+        </div>
+      ) : (
+        <div className='h-screen max-h-screen overflow-hidden'>
+          <div className='relative w-full aspect-square'>
             <Image
-              src={"/assar.gif"}
+              src={'/images/group-mobile.jpg'}
               fill
-              className="object-cover rounded-lg"
-              alt="Assar <3"
+              priority
+              unoptimized={true}    // Hidden gem setting
+              alt="Skurkeriet"
+              sizes='100vw'
+              className='object-cover'
             />
           </div>
-          <input onChange={handleChange} value={password} className="text-black text-2xl pl-2 rounded-md mt-5" type="text" name="password" id="password_input" placeholder="Enter your password" />
-          <button onClick={handleClick} className="text-2xl text-black bg-yellow rounded-xl px-12 py-3 m-auto w-1/2 mt-5 font-bold tracking-widest mobile:px-2">LOGIN</button>
+          <div className='text-whiteText text-center pt-8 mt-20'>
+            <h1 className='mb-2'>SKURKERIET</h1>
+            <h3>NOLLEP SKA BLI VÅRT</h3>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+      <Content openDetails={openDetails} />
+      {/* Character Details Box */}
+      <Character_details
+        condition={renderDetails}
+        SetCondition={closeDetails}
+        id={characterDetails.id}
+        name={characterDetails.name}
+        story={characterDetails.story}
+        isMobile={isMobile} />
+    </main >
   )
 }

@@ -48,7 +48,7 @@ const Character_message = (props: Props) => {
           </div>
           <div className="px-16 mobile:px-3">
             {!isImage ? (
-              <p>{props.message}</p>
+              <p className="pt-6">{props.message}</p>
             ) : (
               <div className="relative w-full aspect-square m-auto p-5">
                 <Image
@@ -77,7 +77,7 @@ const Character_message = (props: Props) => {
         </div>
         <div className="px-16 mobile:px-3">
           {!isImage ? (
-            <p>{props.message}</p>
+            <p className="pt-6">{props.message}</p>
           ) : (
             <div className="relative w-full aspect-square m-auto p-5">
               <Image
