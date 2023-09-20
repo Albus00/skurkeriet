@@ -12,20 +12,22 @@ module.exports = {
     extend: {
       fontFamily: {
         'modesto': 'modesto-condensed',
+        'modestoExpanded': 'modesto-expanded',
         'indivisible': 'indivisible, sans-serif',
         'vinyl': ['var(--font-vinyl)'],
         'cascadia': ['var(--font-cascadia)']
       },
       colors: {
-        black: '#030302',
-        yellow: '#F9EA38',
+        black: '#000000',
+        yellow: '#ffeb04',
         grey: '#2F2F2F',
         cardGrey: '#9c9c9c',
         whiteText: '#E3E3E3'
       },
       backgroundImage: {
         'group': "url('/images/group.jpg')",
-        'groupMobile': "url('/images/group-mobile.jpg')"
+        'groupMobile': "url('/images/group-mobile.jpg')",
+        'darkness': "url('/images/darkness.jpg')"
       },
       height: {
         'thirdWidth': '30vw' // Make height a third of the width of screen (excluding padding)

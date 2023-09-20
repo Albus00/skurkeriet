@@ -4,13 +4,15 @@
 
 @layer base {
   h1 {
-    @apply font-modesto font-bold text-8xl leading-none tracking-[0.3em] text-center
+    @apply font-modestoExpanded font-bold text-8xl leading-none tracking-[0.1em] text-left text-transparent
     handheld:text-6xl handheld:tracking-[0.1em];
   }
 
   h2 {
-    @apply font-modesto font-bold text-5xl leading-none tracking-widest mb-8 text-center
+    @apply font-modestoExpanded font-bold text-5xl leading-none tracking-widest mb-8 text-center text-black
     handheld:text-4xl;
+    -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #F9EA38;
   }
 
   h3 {
