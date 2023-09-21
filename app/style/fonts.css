@@ -11,10 +11,14 @@
  * modesto-condensed:
  *   - http://typekit.com/eulas/00000000000000007735a040
  *   - http://typekit.com/eulas/00000000000000007735a055
+ * modesto-expanded:
+ *   - http://typekit.com/eulas/00000000000000007735a03c
  *
  * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
  */
-/*{"last_published":"2023-07-04 18:47:00 UTC"}*/
+/*{"last_published":"2023-09-20 20:56:07 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=nnh8xid&ht=tk&f=15557.27841.15558.48821.48823.48827&a=89276843&app=typekit&e=css");
 
 @font-face {
 font-family:"modesto-condensed";
@@ -26,6 +30,12 @@ font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
 font-family:"modesto-condensed";
 src:url("https://use.typekit.net/af/870604/00000000000000007735a055/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/870604/00000000000000007735a055/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/870604/00000000000000007735a055/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("opentype");
 font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"modesto-expanded";
+src:url("https://use.typekit.net/af/9c6abc/00000000000000007735a03c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9c6abc/00000000000000007735a03c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9c6abc/00000000000000007735a03c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 @font-face {
@@ -47,4 +57,5 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 .tk-modesto-condensed { font-family: "modesto-condensed",serif; }
+.tk-modesto-expanded { font-family: "modesto-expanded",serif; }
 .tk-indivisible { font-family: "indivisible",sans-serif; }
