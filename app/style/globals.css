@@ -71,7 +71,8 @@ body {
 }
 
   .new-h1 {
-    @apply font-modestoExpanded text-6xl tracking-[0.05em] text-black;
+    @apply font-modestoExpanded text-6xl tracking-[0.05em] text-black
+    mobile:text-3xl;
     -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #F9EA38;
   }
@@ -83,11 +84,13 @@ body {
   }
 
   .new-h3 {
-    @apply font-modestoExpanded inline text-3xl tracking-[0.1em] text-yellow;
+    @apply font-modestoExpanded inline text-3xl tracking-[0.1em] text-yellow
+    mobile:text-xl;
   }
 
   .new-h4 {
     @apply font-modesto inline text-3xl tracking-[0.1em] text-yellow
+    mobile:text-2xl;
   }
 
 .character-shadow {

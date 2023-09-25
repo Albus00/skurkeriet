@@ -12,10 +12,10 @@ const Role_entry = (props: Props) => {
       <div className='px-8'>
         <h3 className="new-h3">{props.role}</h3>
         {props.role2 != "" ? <h4 className='new-h4 pl-3'>({props.role2})</h4> : null}
-        <p className='pl-10 mt-4'>
+        <p className='pl-10 mt-4 mobile:pl-0'>
           {props.text}
         </p>
-        <p className="font-modestoExpanded text-2xl pl-10 mt-2">
+        <p className="font-modestoExpanded text-2xl pl-10 mt-2 mobile:text-lg mobile:pl-0">
           Skurkeriet 23/24:s {props.role.split(',')[0] + ": " + props.previous}
         </p>
       </div>

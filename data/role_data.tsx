@@ -31,4 +31,60 @@ export const roles = [
     text:
       "Som Tryck- och PR har du det främsta ansvaret för Skurkeriets visuella uttryck. Det kan handla om allt från att göra märken och marknadsföring till att skapa phadderiets idolkort. Varje år tas även en handbok fram till Basårs-Nollan, vilket också detta är ditt ansvar som Tryck- och PR. Det finns inget krav på tidigare erfarenhet, men kunskaper inom grafisk design och Adobe-programmen är meriterande.",
   },
+  {
+    id: "albin",
+    name: "Albin Kjellberg",
+    role: "Webbansvarig",
+    role2: "",
+    text:
+      "Som Webbansvarig har du koll på Skurkeriets och basårets hemsidor. Du uppdaterar hemsidorna och ser till att allting fungerar som det ska. Som Webbansvarig sitter du även med i tryck&PR-tvärgruppen och hjälper till med det grafiska arbetet.",
+  },
+  {
+    id: "ella",
+    name: "Ella Bergström",
+    role: "Gyckelansvarig",
+    role2: "",
+    text:
+      "Som Gyckelansvarig har du det huvudsakliga ansvaret för att gyckel blir gjorda. Som Gyckelansvarig kommunicerar du även med andra gyckelansvariga i phadderier/festerier och kommer överens om gemensamma gyckel som kan göras. Som gyckelansvarig ser du till att alla skurkar jobbar tillsammans för att göra så bra gyckel som möjligt. Gyckel görs både för basårets Nolle-P, stora Nolle-P samt till olika sittningar och evenemang som sker under årets lopp.",
+  },
+  {
+    id: "victor",
+    name: "Victor Ström",
+    role: "Basårsansvarig",
+    role2: "",
+    text:
+      "Som Basårsansvarig är du den som har det huvudsakliga ansvaret över att basårets mottagning planeras och genomförs. Du kommer att vara projektledare under basårets mottagning men också se till att arbetet inför mottagningen flyter på. Som basårsansvarig kommer du att jobba nära tillsammans med många av de andra posterna. Men lite extra tillsammans med aktivitetsansvarig och fadderansvarig då dessa poster också spelar en stor roll i basårets mottagning.",
+  },
+  {
+    id: "sofia",
+    name: "Sofia Waldner",
+    role: "Fadderansvarig",
+    role2: "",
+    text:
+      "Som Fadderansvarig ansvarar du för alla basårsfaddrar och skurkeriets eskorteringsfaddrar. Det innebär att du genom kontakt med övriga phadderiers fadderansvariga kommer att rekrytera faddrarna, du sätter faddrarnas schema och sköter främsta kontakten med de. Du kommer också hjälpa till med alla gemensamma fadderutbildningar som planeras tillsammans med övriga phadderiers fadderansvariga. Du kommer också att samarbeta nära med basårsansvarig och aktivitet under årets gång och fungera som basårsansvarigas vice.",
+  },
+  {
+    id: "jossan",
+    name: "Josefina Spångberg",
+    role: "Aktivitetsansvarig",
+    role2: "",
+    text:
+      "Som Aktivitetsansvarig planerar du tillsammans med aktivitetsansvariga i andra phadderier alla aktiviteter under stora mottagningen. Under basårets Nolle-P är det du och basårsansvarig som planerar aktiviteterna till mottagningen, men även andra skurkar hjälper till med de uppgifterna. Som aktivitetsansvarig är det perfekt att vara kreativ och taggad för att få till en så rolig mottagning som möjligt.",
+  },
+  {
+    id: "gk",
+    name: "Gustaf Kronholm",
+    role: "Företagsansvarig",
+    role2: "",
+    text:
+      "Som företagsansvarig har du det främsta ansvaret att ta kontakt och planera samarbeten med företag som hjälper mottagningen att drivas framåt. Ett exempel på ett samarbete är att låta företag exponeras mot studenter, exempelvis under en aktivitet, på en lunchföreläsning, i Nolleboken etc i utbyte mot pengar eller prylar som gynnar våra nya studenter. Livet som företagsansvarig är ett unikt tillfälle för en att knyta kontakter med de människorna bakom företagen och lära sig hur marknaden där ute faktiskt fungerar.",
+  },
+  {
+    id: "moyfrid",
+    name: "Møyfrid Hjalmarson",
+    role: "Sittningsansvarig",
+    role2: "",
+    text:
+      "Som Sittningsansvarig planerar och genomför du sittningar tillsammans med sittningsansvariga i andra phadderier. Det innebär kontakt med Trappan (eller andra lokaler), planering av biljettpriser tillsammans med kassören och den huvudsakliga planeringen kring hur sittningen kommer att gå till.",
+  },
 ];

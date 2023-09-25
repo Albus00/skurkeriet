@@ -7,9 +7,17 @@ import { useScrollBlock } from '@/hooks/useScrollBlock';
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Character_details from '@/components/Character_details';
 import Content from './Content';
+import { redirect } from 'next/navigation'
 
 export default function Page() {
   const isMobile = useMediaQuery('(max-width: 1024px)')
+
+  // Send user to the application page if entering the page for the first time
+  const queryParameters = new URLSearchParams(window.location.search)
+  const redir = queryParameters.get("redir");
+  if (!redir) {
+    redirect("/application");
+  }
 
   // Import the scroll block functions
   const [blockScroll, allowScroll] = useScrollBlock();
