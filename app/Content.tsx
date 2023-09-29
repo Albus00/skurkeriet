@@ -82,7 +82,7 @@ const Content = (props: Props) => {
           alt="Regler"
           width="1200"
           height="500"
-          className='mt-6'
+          className='mt-6 m-auto'
         />
       </div>
 
@@ -125,7 +125,7 @@ const Content = (props: Props) => {
             alt="All makt åt Tengil"
             width="700"
             height="200"
-            className='mt-10'
+            className='mt-10 m-auto'
           />
         </a>
       </div>
