@@ -1,7 +1,14 @@
+"use client"
+
 import Image from 'next/image';
-import Roles from '@/app/Roles';
+import { roles } from '@/data/role_data'
+import useMediaQuery from '@/hooks/useMediaQuery'
+import Character_details from '@/components/Character_details';
+import Role_entry from '@/components/Role_entry';
 
 export default function Page() {
+  const isMobile = useMediaQuery('(max-width: 1024px)')
+
   return (
     <main>
       {/* Group image */}
@@ -20,9 +27,9 @@ export default function Page() {
             <p className='fadeIn2 text-xl text-left'>
               Sök själv eller föreslå någon du tror skulle passa in i nästa generation av Skurkeriet.
               Nedan finner du beskrivningar av de poster som erbjuds.&nbsp;
-              <a href='/?redir=true' className='inline-block font-semibold'> Klicka här för att gå tillbaka till skurkeriet.se</a>
+              <a href='/?redir=true' className='inline-block font-semibold ease-linear duration-500'> Klicka här för att gå tillbaka till skurkeriet.se</a>
             </p>
-            <a href='https://docs.google.com/forms/d/e/1FAIpQLSdMqKqnuWUcQkBT6GY4iDXrmDStPdkoGyr1z2s-FlnxqVgB7g/viewform?usp=sf_link'>
+            <a href={'/apply'}>
               <button
                 className='fadeIn3 bg-transparent rounded-3xl px-12 py-3 m-auto mt-10 font-modestoExpanded text-3xl text-yellow border-yellow border-2 ease-linear duration-500
                   hover:scale-110'
@@ -30,7 +37,7 @@ export default function Page() {
                 SÖK
               </button>
             </a><br />
-            <a href='https://docs.google.com/forms/d/e/1FAIpQLSePqwOmINrGqntq1Ugwh-y00eTYywFqFYTVgU6mSAIkZsTltA/viewform?usp=sf_link'>
+            <a href={'/nominate'}>
               <button
                 className='fadeIn4 bg-transparent rounded-3xl px-12 py-3 m-auto mt-5 font-modestoExpanded text-3xl text-yellow border-yellow border-2 ease-linear duration-500
                   hover:scale-110'
@@ -42,8 +49,23 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Render the roles */}
-      <Roles />
+      <div>
+        <h1 className='new-h1'>Skurkeriet postbeskrivningar</h1>
+        <div className='mt-14 px-40 mb-32 mobile:px-4'>
+          {/* Generate character cards from the stories JSON file */}
+          {roles.map((roles) => {
+            return (
+              <Role_entry
+                key={roles.id}
+                role={roles.role}
+                role2={roles.role2}
+                previous={roles.name}
+                text={roles.text}
+              />
+            );
+          })}
+        </div>
+      </div>
 
     </main >
   )

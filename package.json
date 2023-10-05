@@ -18,7 +18,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.5.0",
-    "react-google-forms-hooks": "^1.2.4",
     "typescript": "4.9.5",
     "typewriter-effect": "^2.20.1",
     "use-fit-text": "^2.4.0"

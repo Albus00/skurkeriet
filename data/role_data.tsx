@@ -37,7 +37,7 @@ export const roles = [
     role: "Webbansvarig",
     role2: "",
     text:
-      "Som Webbansvarig har du koll på &a och &a hemsidor. Du uppdaterar hemsidorna och ser till att allting fungerar som det ska. Som Webbansvarig sitter du även med i tryck & PR-tvärgruppen och hjälper till med det grafiska arbetet inför Nolle-p.",
+      "Som Webbansvarig har du koll på Skurkeriets och basårets hemsidor. Du uppdaterar hemsidorna och ser till att allting fungerar som det ska. Som Webbansvarig sitter du även med i tryck&PR-tvärgruppen och hjälper till med det grafiska arbetet.",
   },
   {
     id: "ella",
@@ -69,7 +69,7 @@ export const roles = [
     role: "Aktivitetsansvarig",
     role2: "",
     text:
-      "Som Aktivitetsansvarig kommer ditt huvudsakliga ansvarsområde vara att planera basårets mottagningsaktiviteter. Här kommer du jobba nära tillsammans med basårsansvarig och fadderansvarig då deras arbete också spelar en stor roll i denna planering. Du kommer även vara delaktig i planeringen av aktiviteter till stora mottagningen tillsammans med de andra phadderiernas aktivittsansvariga.  Det är en stor fördel för rollen att vara en god planerare, kreativ och entusiastisk för att få till en praktisk och framförallt rolig mottagning.",
+      "Som Aktivitetsansvarig planerar du tillsammans med aktivitetsansvariga i andra phadderier alla aktiviteter under stora mottagningen. Under basårets Nolle-P är det du och basårsansvarig som planerar aktiviteterna till mottagningen, men även andra skurkar hjälper till med de uppgifterna. Som aktivitetsansvarig är det perfekt att vara kreativ och taggad för att få till en så rolig mottagning som möjligt.",
   },
   {
     id: "gk",
