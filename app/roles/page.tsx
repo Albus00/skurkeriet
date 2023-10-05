@@ -1,4 +1,4 @@
-import Roles from '@/app/Roles';
+import Roles from '@/components/Roles';
 
 export default function Page() {
   return (

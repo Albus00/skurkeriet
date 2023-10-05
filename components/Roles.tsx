@@ -1,5 +1,5 @@
 import React from 'react'
-import Role_entry from '../components/Role_entry';
+import Role_entry from './Role_entry';
 import { roles } from '@/data/role_data';
 
 const Roles = () => {
