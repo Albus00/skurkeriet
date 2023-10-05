@@ -72,13 +72,9 @@ body {
 
   .new-h1 {
     @apply font-modestoExpanded text-6xl tracking-[0.05em] text-black
-    mobile:text-3xl;
+    mobile:text-3xl mobile:text-yellow;
     -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #F9EA38;
-  }
-
-  .new-h1-mobile {
-    -webkit-text-stroke-width: 0.3px;
   }
 
   .new-h2 {
