@@ -7,7 +7,7 @@ export default function Page() {
       {/* Group image */}
       <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom'>
         <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
-          <div className='fadeIn1 relative h-1/3 w-4/5'>
+          <div className='fadeIn1 relative h-1/3 w-4/5 mobile:w-full'>
             <Image
               src={'/images/darkness.jpg'}
               fill
@@ -16,7 +16,7 @@ export default function Page() {
               sizes="50vw"
               className="object-contain object-left" />
           </div>
-          <div className='w-1/2 pt-8 mobile:w-4/5 mobile:pt-0'>
+          <div className='w-1/2 pt-8 mobile:w-full mobile:pt-0'>
             <p className='fadeIn2 text-xl text-left mobile:text-lg'>
               Sök själv eller föreslå någon du tror skulle passa in i nästa generation av Skurkeriet.
               Nedan finner du beskrivningar av de poster som erbjuds.&nbsp;
