@@ -32,9 +32,10 @@ const Role_entry = (props: Props) => {
             ) : (
               <p>{props.text}</p>)}
         </div>
-        <p className="font-modestoExpanded text-2xl pl-10 mt-2 mobile:text-lg mobile:pl-0">
-          Skurkeriet 23/24:s {props.role.split(',')[0] + ": " + props.previous}
-        </p>
+        <div className="font-modestoExpanded text-2xl pl-10 mt-2 mobile:text-lg mobile:pl-0">
+          <p className="text-left inline handheld:text-xl mobile:text-base">Skurkeriet 23/24:s {props.role.split(',')[0] + ": "}</p>
+          <p className="inline handheld:block">{props.previous}</p>
+        </div>
       </div>
     </div >
   )
