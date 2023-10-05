@@ -5,7 +5,7 @@ import { roles } from '@/data/role_data';
 const Roles = () => {
   return (
     <div>
-      <h1 className='new-h1'>Skurkeriet postbeskrivningar</h1>
+      <h1 className='new-h1 mobile:new-h1-mobile'>Skurkeriet postbeskrivningar</h1>
       <div className='mt-14 px-40 mb-32 mobile:px-4'>
         {/* Generate character cards from the stories JSON file */}
         {roles.map((roles) => {

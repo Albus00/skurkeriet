@@ -3,10 +3,10 @@ import Roles from '@/components/Roles';
 
 export default function Page() {
   return (
-    <main>
+    <main className="bg-[#000000]">
       {/* Group image */}
-      <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom bg-black'>
-        <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%] mobile:pt-[10%]'>
+      <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom'>
+        <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
           <div className='fadeIn1 relative h-1/3 w-4/5'>
             <Image
               src={'/images/darkness.jpg'}

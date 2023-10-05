@@ -77,6 +77,10 @@ body {
   -webkit-text-stroke-color: #F9EA38;
   }
 
+  .new-h1-mobile {
+    -webkit-text-stroke-width: 0.2px;
+  }
+
   .new-h2 {
     @apply font-modestoExpanded text-black;
     -webkit-text-stroke-width: 0.1px;
