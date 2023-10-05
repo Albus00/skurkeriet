@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import Roles from '@/app/Roles';
+import Roles from '@/components/Roles';
 
 export default function Page() {
   return (
-    <main>
+    <main className="bg-[#000000]">
       {/* Group image */}
-      <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom bg-black'>
-        <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%] mobile:pt-[30%]'>
-          <div className='fadeIn1 relative h-1/3 w-4/5'>
+      <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom'>
+        <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
+          <div className='fadeIn1 relative h-1/3 w-4/5 mobile:w-full'>
             <Image
               src={'/images/darkness.jpg'}
               fill
@@ -16,8 +16,8 @@ export default function Page() {
               sizes="50vw"
               className="object-contain object-left" />
           </div>
-          <div className='w-1/2 pt-8 mobile:w-4/5 mobile:pt-[20%]'>
-            <p className='fadeIn2 text-xl text-left'>
+          <div className='w-1/2 pt-8 mobile:w-full mobile:pt-0'>
+            <p className='fadeIn2 text-xl text-left mobile:text-lg'>
               Sök själv eller föreslå någon du tror skulle passa in i nästa generation av Skurkeriet.
               Nedan finner du beskrivningar av de poster som erbjuds.&nbsp;
               <a href='/?redir=true' className='inline-block font-semibold'> Klicka här för att gå tillbaka till skurkeriet.se</a>
@@ -25,7 +25,7 @@ export default function Page() {
             <a href='https://docs.google.com/forms/d/e/1FAIpQLSdMqKqnuWUcQkBT6GY4iDXrmDStPdkoGyr1z2s-FlnxqVgB7g/viewform?usp=sf_link'>
               <button
                 className='fadeIn3 bg-transparent rounded-3xl px-12 py-3 m-auto mt-10 font-modestoExpanded text-3xl text-yellow border-yellow border-2 ease-linear duration-500
-                  hover:scale-110'
+                  hover:scale-110 mobile:px-10 mobile:text-2xl'
               >
                 SÖK
               </button>
@@ -33,7 +33,7 @@ export default function Page() {
             <a href='https://docs.google.com/forms/d/e/1FAIpQLSePqwOmINrGqntq1Ugwh-y00eTYywFqFYTVgU6mSAIkZsTltA/viewform?usp=sf_link'>
               <button
                 className='fadeIn4 bg-transparent rounded-3xl px-12 py-3 m-auto mt-5 font-modestoExpanded text-3xl text-yellow border-yellow border-2 ease-linear duration-500
-                  hover:scale-110'
+                  hover:scale-110 mobile:px-10 mobile:text-2xl'
               >
                 NOMINERA
               </button>
