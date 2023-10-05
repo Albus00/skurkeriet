@@ -7,10 +7,17 @@ import { useScrollBlock } from '@/hooks/useScrollBlock';
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Character_details from '@/components/Character_details';
 import Content from './Content';
-import { redirect } from 'next/navigation';
+import { redirect } from 'next/navigation'
 
 export default function Page() {
   const isMobile = useMediaQuery('(max-width: 1024px)')
+
+  // Send user to the application page if entering the page for the first time
+  const queryParameters = new URLSearchParams(window.location.search)
+  const redir = queryParameters.get("redir");
+  if (!redir) {
+    redirect("/application");
+  }
 
   // Import the scroll block functions
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -38,42 +45,32 @@ export default function Page() {
   return (
     <main>
       {/* Group image */}
-      <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom bg-black'>
-        <div className='text-whiteText h-full w-full pl-[18%] pt-[15%] mobile:px-[5%] mobile:pt-[30%]'>
-          <Image
-            src={'/images/darkness.jpg'}
-            width={1000}
-            height={1000}
-            unoptimized
-            alt={'BLI EN DEL AV MÖRKRET'}
-            sizes="50vw"
-            className="
-          object-contain
-        " />
-          <div className='w-1/2 pt-8 mobile:w-4/5 mobile:pt-[20%]'>
-            <p className='text-xl text-left'>
-              Sök själv eller föreslå någon du tror skulle passa in i nästa generation av Skurkeriet. Nedan finner du beskrivningar av de poster som erbjuds.
-            </p>
-            <a href={'/apply'}>
-              <button
-                className='bg-transparent rounded-3xl px-12 py-3 m-auto mt-10 font-modestoExpanded text-3xl text-yellow border-yellow border-2 ease-linear duration-500
-                  hover:scale-110'
-              >
-                SÖK
-              </button>
-            </a><br />
-            <a href={'/nominate'}>
-              <button
-                className='bg-transparent rounded-3xl px-12 py-3 m-auto mt-10 font-modestoExpanded text-3xl text-yellow border-yellow border-2 ease-linear duration-500
-                  hover:scale-110'
-              >
-                NOMINERA
-              </button>
-            </a>
+      {!isMobile ? (
+        <div className='flex flex-col-reverse items-center w-full h-screen bg-cover object-bottom bg-bottom bg-group'>
+          <div className='text-whiteText text-center h-1/3'>
+            <h1 className='mb-5'>SKURKERIET</h1>
+            <h3>NOLLEP SKA BLI VÅRT</h3>
           </div>
         </div>
-      </div>
-
+      ) : (
+        <div className='h-screen max-h-screen overflow-hidden'>
+          <div className='relative w-full aspect-square'>
+            <Image
+              src={'/images/group-mobile.jpg'}
+              fill
+              priority
+              unoptimized={true}    // Hidden gem setting
+              alt="Skurkeriet"
+              sizes='100vw'
+              className='object-cover'
+            />
+          </div>
+          <div className='text-whiteText text-center pt-8 mt-20'>
+            <h1 className='mb-2'>SKURKERIET</h1>
+            <h3>NOLLEP SKA BLI VÅRT</h3>
+          </div>
+        </div>
+      )}
       <Content openDetails={openDetails} />
       {/* Character Details Box */}
       <Character_details
