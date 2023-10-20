@@ -1,15 +1,30 @@
+"use client"
 import Image from 'next/image';
 import Roles from '@/components/Roles';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
-  const deadline = new Date("Oct 21, 2023 00:00:00").getTime();
-  const now = new Date().getTime();
+  const deadlineTime = new Date("Oct 21, 2023 00:00:00").getTime();
+  const [deadline, setDeadline] = useState(false);
+
+  // Update date every second to trigger deadline
+  useEffect(() => {
+    var deadlineTimer = setInterval(function () {
+      const now = new Date().getTime();
+
+      if (now > deadlineTime) {
+        setDeadline(true);
+        clearInterval(deadlineTimer);
+      }
+
+    }, 1000)
+  }, [deadlineTime]);
 
   return (
     <main className="bg-[#000000]">
       {/* Group image */}
       <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom'>
-        {deadline > now ? (
+        {!deadline ? (
           <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
             <div className='fadeIn1 relative h-1/3 w-4/5 mobile:w-full'>
               <Image
@@ -48,7 +63,7 @@ export default function Page() {
           <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
             <div className='w-1/2 pt-8 mobile:w-full mobile:pt-[40%]'>
               <p className='fadeIn2 text-xl text-left mobile:text-lg'>
-                Sökperioden till Skurkeriet är tyvärr stängt.
+                Sökperioden till Skurkeriet är tyvärr stängd.
                 <a href='/?redir=true' className='block font-semibold pt-4'> Klicka här för att gå tillbaka till skurkeriet.se</a>
               </p>
             </div>
