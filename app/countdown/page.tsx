@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 
 export default function Page() {
-  const countDownDate = new Date("Oct 20, 2023 23:59:59").getTime();
+  const countDownDate = new Date("Oct 21 2023 00:00:00").getTime();
 
-  const [timeLeft, setTimeLeft] = useState({ d: "1", h: "1", m: "1", s: "1" })
+  const [timeLeft, setTimeLeft] = useState({ d: "0", h: "00", m: "00", s: "00" })
 
   useEffect(() => {
 
@@ -29,6 +29,13 @@ export default function Page() {
 
     // Get the distance between the current time and the countdown goal
     const distance = countDownDate - now;
+
+    // Make sure the timer does not go below 0
+    if (distance < 0) {
+      setTimeLeft({ d: "0", h: "00", m: "00", s: "00" });
+      return distance;
+    }
+
 
     // Calculate all the different variables
     let days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString();
