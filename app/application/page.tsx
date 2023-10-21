@@ -60,7 +60,7 @@ export default function Page() {
             </div>
           </div>
         ) : (
-          <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
+          <div className='text-whiteText h-1/2 w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
             <div className='w-1/2 pt-8 mobile:w-full mobile:pt-[40%]'>
               <p className='fadeIn2 text-xl text-left mobile:text-lg'>
                 Sökperioden till Skurkeriet är tyvärr stängd.
