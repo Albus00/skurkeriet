@@ -23,7 +23,7 @@ export default function Page() {
   return (
     <main className="bg-[#000000]">
       {/* Group image */}
-      <div className='flex flex-col-reverse items-left w-full h-screen bg-cover bg-left-bottom'>
+      <div className='flex flex-col-reverse items-left w-full h-1/2 bg-cover bg-left-bottom'>
         {!deadline ? (
           <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
             <div className='fadeIn1 relative h-1/3 w-4/5 mobile:w-full'>
@@ -60,7 +60,7 @@ export default function Page() {
             </div>
           </div>
         ) : (
-          <div className='text-whiteText h-1/2 w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
+          <div className='text-whiteText h-full w-full pl-[18%] pt-[10%] mobile:px-[5%]'>
             <div className='w-1/2 pt-8 mobile:w-full mobile:pt-[40%]'>
               <p className='fadeIn2 text-xl text-left mobile:text-lg'>
                 Sökperioden till Skurkeriet är tyvärr stängd.
