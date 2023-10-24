@@ -64,7 +64,7 @@ export default function Page() {
             <div className='w-1/2 pt-8 mobile:w-full mobile:pt-[20%]'>
               <p className='fadeIn2 text-xl text-left mobile:text-lg'>
                 Sökperioden till Skurkeriet är tyvärr stängd.
-                <a href='/?redir=true' className='block font-semibold pt-4'> Klicka här för att gå tillbaka till skurkeriet.se</a>
+                <a href='/?redir=true' className='block font-semibold py-4'> Klicka här för att gå tillbaka till skurkeriet.se</a>
               </p>
             </div>
           </div>
