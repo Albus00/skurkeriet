@@ -19,7 +19,7 @@
   }
 
   h4 {
-    @apply font-modesto font-bold text-5xl leading-none tracking-[0.2em];
+    @apply font-modesto font-bold text-5xl leading-none tracking-[0.2em] mobile:text-4xl;
   }
 
   h5 {
