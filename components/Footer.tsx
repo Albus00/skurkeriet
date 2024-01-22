@@ -1,14 +1,15 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import Marquee from "react-fast-marquee";
 
 type Props = {}
 
 const Footer = (props: Props) => {
   // get the current url
-  const url = window.location.pathname;
+  const pathname = usePathname()
 
-  if (url.includes("countdown"))
+  if (pathname.includes("countdown"))
     return (null);
 
   return (

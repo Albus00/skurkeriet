@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image';
 
 export default function Page() {
   const countDownDate = new Date("Jan 27 2024 00:00:00").getTime();
