@@ -73,8 +73,8 @@ export default function Page() {
         <div className='text-8xl mobile:hidden'>
           {timeLeft.h + "t " + timeLeft.m + "m " + timeLeft.s + "s"}
         </div>
-        <div className="h-screen mobile:block">
-          <div className='countdown-text'>
+        <div className="h-screen text-[50vw] hidden mobile:block">
+          <div className=''>
             {timeLeft.h}
           </div>
           <div className='countdown-text'>

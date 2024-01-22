@@ -5,6 +5,12 @@ import Marquee from "react-fast-marquee";
 type Props = {}
 
 const Footer = (props: Props) => {
+  // get the current url
+  const url = window.location.pathname;
+
+  if (url.includes("countdown"))
+    return (null);
+
   return (
     <div className="text-grey font-cascadia pb-5">
       <p className="text-center mb-2">&copy;Skurkeriet</p>
