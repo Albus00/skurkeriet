@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'modesto': 'modesto-condensed',
+        'modestoExpanded': 'modesto-expanded',
         'indivisible': 'indivisible, sans-serif',
         'vinyl': ['var(--font-vinyl)'],
         'cascadia': ['var(--font-cascadia)']
