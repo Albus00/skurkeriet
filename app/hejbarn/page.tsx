@@ -1,6 +1,5 @@
 "use client"
 
-import { type } from "os";
 import Typewriter from "typewriter-effect";
 
 export default function Page() {
