@@ -1,11 +1,14 @@
 "use client"
 
+import Vk_typewriter from '@/components/Vk_typewriter';
 import React, { useState, useEffect } from 'react'
+
 
 export default function Page() {
   const countDownDate = new Date("Jan 27 2024 00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({ d: "0", h: "00", m: "00", s: "00" })
+  const [deadline, setDeadline] = useState(false);
 
   useEffect(() => {
 
@@ -14,11 +17,24 @@ export default function Page() {
 
     // Update countdown every second
     const timer = setInterval(() => {
-      // When it reaches 0, clear the interval
-      if (getCountdown() < 0) {
-        clearInterval(timer);
-      }
+      // Check for when timer reaches 0
+      let countdown = getCountdown();
+      if (countdown < 0) {
+        // Dont let the timer go below 0
+        setTimeLeft({ d: "0", h: "00", m: "00", s: "00" });
 
+        // Remove numbers for dramatic effect, until 9 seconds after deadline, then show the typewriter
+        if (countdown < -9000) {
+          setDeadline(true);
+          clearInterval(timer);
+        }
+        else if (countdown < -6000) {
+          setTimeLeft({ d: "0", h: "00", m: "", s: "" });
+        }
+        else if (countdown < -3000) {
+          setTimeLeft({ d: "0", h: "00", m: "00", s: "" });
+        }
+      }
     }, 1000);
   }, [])
 
@@ -31,7 +47,6 @@ export default function Page() {
 
     // Make sure the timer does not go below 0
     if (distance < 0) {
-      setTimeLeft({ d: "0", h: "00", m: "00", s: "00" });
       return distance;
     }
 
@@ -62,28 +77,35 @@ export default function Page() {
 
   return (
     <main className='h-full'>
-      <div className='m-auto mt-10 text-center pt-2/5 font-modestoExpanded text-6xl tracking-[0.05em] text-yellow'>
-        <div className='text-5xl'>
-          {timeLeft.d == "1" ? (timeLeft.d + " DAG") :
-            timeLeft.d == "0" ? "" :
-              (timeLeft.d + " DAGAR")
-          }
-        </div>
-        <div className='text-8xl mobile:hidden'>
-          {timeLeft.h + "t " + timeLeft.m + "m " + timeLeft.s + "s"}
-        </div>
-        <div className="h-screen text-[50vw] hidden mobile:block">
-          <div className=''>
-            {timeLeft.h}
+      {
+        !deadline ? (
+          <div className='m-auto mt-10 text-center pt-2/5 font-modestoExpanded text-6xl tracking-[0.05em] text-yellow'>
+            <div className='text-5xl'>
+              {timeLeft.d == "1" ? (timeLeft.d + " DAG") :
+                timeLeft.d == "0" ? "" :
+                  (timeLeft.d + " DAGAR")
+              }
+            </div>
+            <div className='text-8xl mobile:hidden'>
+              {timeLeft.h + "t " + timeLeft.m + "m " + timeLeft.s + "s"}
+            </div>
+            <div className="h-screen text-[50vw] hidden mobile:block">
+              <div className=''>
+                {timeLeft.h}
+              </div>
+              <div className='countdown-text'>
+                {timeLeft.m}
+              </div>
+              <div className='countdown-text'>
+                {timeLeft.s}
+              </div>
+            </div>
           </div>
-          <div className='countdown-text'>
-            {timeLeft.m}
-          </div>
-          <div className='countdown-text'>
-            {timeLeft.s}
-          </div>
-        </div>
-      </div>
+        ) : (
+          <Vk_typewriter />
+        )
+      }
+
     </main >
   )
 }
