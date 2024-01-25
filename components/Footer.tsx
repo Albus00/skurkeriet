@@ -9,7 +9,7 @@ const Footer = (props: Props) => {
   // get the current url
   const pathname = usePathname()
 
-  if (pathname.includes("countdown"))
+  if (pathname.includes("countdown") || pathname.includes("hejbarn"))
     return (null);
 
   return (
